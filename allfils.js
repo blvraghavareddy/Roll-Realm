@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    /* --- 1. Theme & Direction Initialization --- */
     const savedTheme = localStorage.getItem('theme') || 'light';
     const savedDir = localStorage.getItem('dir') || 'ltr';
 
@@ -30,26 +31,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* --- Dynamic Active Navbar Link Highlighter --- */
-    const currentPage = window.location.pathname.split("/").pop() || "main.html";
+    /* --- 2. Dynamic Active Navbar Link Highlighter (Permanent & Dropdown Safe) --- */
+    let currentPath = window.location.pathname.split("/").pop().toLowerCase().replace(".html", "");
+    if (currentPath === "" || currentPath === "/") {
+        currentPath = "index";
+    }
+
     const navItems = document.querySelectorAll(".nav-links a");
 
     navItems.forEach(link => {
         link.classList.remove("active");
         const linkHref = link.getAttribute("href");
-        
-        if (linkHref === currentPage || (currentPage === "" && linkHref === "main.html")) {
+        if (!linkHref) return;
+
+        // Clean link href for accurate comparison
+        let cleanHref = linkHref.split("/").pop().toLowerCase().replace(".html", "");
+
+        // Match current page with link href (handling index, main, and sub-pages)
+        const isMatch = (cleanHref === currentPath) || 
+                        (currentPath === "index" && (cleanHref === "" || cleanHref === "index.html" || cleanHref === "main.html"));
+
+        if (isMatch) {
             link.classList.add("active");
             
+            // If the active link is inside a dropdown (like Home 1 or Home 2), 
+            // automatically keep the parent dropdown toggle permanently highlighted as well.
             const parentDropdown = link.closest(".dropdown");
             if (parentDropdown) {
-                const dropdownToggle = parentDropdown.querySelector("a");
-                if (dropdownToggle) dropdownToggle.classList.add("active");
+                const dropdownToggle = parentDropdown.querySelector(".dropdown-toggle") || parentDropdown.querySelector("a");
+                if (dropdownToggle) {
+                    dropdownToggle.classList.add("active");
+                }
             }
         }
     });
 
-    /* --- Mobile Navigation Menu Toggle --- */
+    /* --- 3. Mobile Navigation Menu Toggle --- */
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const navLinks = document.getElementById('navLinks');
 
@@ -65,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* --- Mobile Dropdown Toggle Support --- */
+    /* --- 4. Mobile Dropdown Toggle Support --- */
     const dropdownToggle = document.querySelector('.dropdown-toggle');
     const dropdownMenu = document.querySelector('.dropdown-menu');
 
@@ -78,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* --- 5. Product Filtering System --- */
     const filterButtons = document.querySelectorAll('.pill-btn');
     const productCards = document.querySelectorAll('.product-card, .grid .card');
 
@@ -103,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* --- 6. Product Search Input --- */
     const productSearchInput = document.getElementById('productSearch');
     if (productSearchInput) {
         productSearchInput.addEventListener('input', (e) => {
@@ -121,13 +140,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* --- 7. Enquiry Form Submission --- */
     const enquiryForm = document.getElementById('enquiryForm');
     const formSuccess = document.getElementById('formSuccess');
 
     if (enquiryForm) {
         enquiryForm.addEventListener('submit', (e) => {
             e.preventDefault();
-
             enquiryForm.style.display = 'none';
             if (formSuccess) {
                 formSuccess.style.display = 'block';
@@ -136,21 +155,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+/* --- Helper Function: Update Theme Icon --- */
 function updateThemeIcon(theme) {
     const themeToggleBtn = document.getElementById('themeToggle');
     if (!themeToggleBtn) return;
 
     const icon = themeToggleBtn.querySelector('i');
     if (icon) {
-        if (theme === 'dark') {
-            icon.className = 'fa-solid fa-sun';
-        } else {
-            icon.className = 'fa-solid fa-moon';
-        }
+        icon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
     }
 }
 
-/* --- Scroll-Down Animation Observer --- */
+/* --- 8. Scroll-Down Animation Observer --- */
 document.addEventListener("DOMContentLoaded", function () {
     const targets = document.querySelectorAll("section, .card, .stat-card");
 
@@ -161,14 +177,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const observerOptions = {
         root: null,
         rootMargin: "0px",
-        threshold: 0.10 // Triggers when 10% of the element enters the viewport
+        threshold: 0.10
     };
 
     const observer = new IntersectionObserver((entries, observerInstance) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                observerInstance.unobserve(entry.target); // Animate smoothly once when scrolled into view
+                observerInstance.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -176,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
     targets.forEach(el => observer.observe(el));
 });
 
-/* --- Interactive Testimonial Carousel Controller --- */
+/* --- 9. Interactive Testimonial Carousel Controller --- */
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".testimonial-carousel-wrapper").forEach(wrapper => {
         const slides = wrapper.querySelectorAll(".testimonial-slide");
@@ -202,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function startTimer() {
             stopTimer();
-            timer = setInterval(nextSlide, 4000); // 4 seconds interval
+            timer = setInterval(nextSlide, 4000);
         }
 
         function stopTimer() {
@@ -228,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//aboutus//
+/* --- 10. About Us Counter Animation --- */
 document.addEventListener("DOMContentLoaded", function () {
     const milestonesBanner = document.querySelector(".milestones-banner");
     const statNumbers = document.querySelectorAll(".milestones-banner .stat-number");
@@ -282,35 +298,4 @@ document.addEventListener("DOMContentLoaded", function () {
     if (milestonesBanner) {
       observer.observe(milestonesBanner);
     }
-  });
-  /* --- Dynamic Active Navbar Link Highlighter --- */
-document.addEventListener("DOMContentLoaded", () => {
-    // Get current path and clean it (remove .html and leading/trailing slashes)
-    let currentPath = window.location.pathname.split("/").pop().toLowerCase().replace(".html", "");
-    if (currentPath === "" || currentPath === "/") {
-        currentPath = "index";
-    }
-
-    const navItems = document.querySelectorAll(".nav-links a");
-
-    navItems.forEach(link => {
-        link.classList.remove("active");
-        const linkHref = link.getAttribute("href");
-        if (!linkHref) return;
-
-        // Clean link href for comparison
-        let cleanHref = linkHref.split("/").pop().toLowerCase().replace(".html", "");
-
-        // Match current page with link href
-        if (cleanHref === currentPath || (currentPath === "index" && (cleanHref === "" || cleanHref === "index.html" || cleanHref === "main.html"))) {
-            link.classList.add("active");
-            
-            // Handle dropdown parent if active link is inside a dropdown
-            const parentDropdown = link.closest(".dropdown");
-            if (parentDropdown) {
-                const dropdownToggle = parentDropdown.querySelector("a");
-                if (dropdownToggle) dropdownToggle.classList.add("active");
-            }
-        }
-    });
 });
