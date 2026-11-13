@@ -285,24 +285,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   /* --- Dynamic Active Navbar Link Highlighter --- */
 document.addEventListener("DOMContentLoaded", () => {
-    let currentPage = window.location.pathname.split("/").pop();
-    if (currentPage === "" || currentPage === "/") {
-        currentPage = "index.html";
+    // Get current path and clean it (remove .html and leading/trailing slashes)
+    let currentPath = window.location.pathname.split("/").pop().toLowerCase().replace(".html", "");
+    if (currentPath === "" || currentPath === "/") {
+        currentPath = "index";
     }
 
-    // Target strictly top-level navbar links to avoid dropdown conflicts
-    const navItems = document.querySelectorAll(".nav-links > li > a");
+    const navItems = document.querySelectorAll(".nav-links a");
 
     navItems.forEach(link => {
         link.classList.remove("active");
         const linkHref = link.getAttribute("href");
-        
-        if (linkHref === currentPage) {
+        if (!linkHref) return;
+
+        // Clean link href for comparison
+        let cleanHref = linkHref.split("/").pop().toLowerCase().replace(".html", "");
+
+        // Match current page with link href
+        if (cleanHref === currentPath || (currentPath === "index" && (cleanHref === "" || cleanHref === "index.html" || cleanHref === "main.html"))) {
             link.classList.add("active");
             
+            // Handle dropdown parent if active link is inside a dropdown
             const parentDropdown = link.closest(".dropdown");
             if (parentDropdown) {
-                const dropdownToggle = parentDropdown.querySelector(".dropdown-toggle");
+                const dropdownToggle = parentDropdown.querySelector("a");
                 if (dropdownToggle) dropdownToggle.classList.add("active");
             }
         }
