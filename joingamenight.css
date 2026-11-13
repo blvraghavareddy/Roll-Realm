@@ -1,0 +1,327 @@
+/* ==========================================================================
+   ROLL & REALM - FORM / GAMENIGHT CSS (joingamenight.css)
+   ========================================================================== */
+
+:root {
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lora', serif;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- Floating Top-Right Action Buttons --- */
+.page-top-actions {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    display: flex;
+    gap: 0.75rem;
+    z-index: 10;
+}
+
+[dir="rtl"] .page-top-actions {
+    right: auto;
+    left: 2rem;
+}
+
+.icon-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+    border-color: var(--accent-teal);
+    color: var(--accent-teal);
+    transform: translateY(-2px);
+}
+
+[dir="rtl"] .input-icon {
+    left: auto;
+    right: 1rem;
+}
+
+[dir="rtl"] .form-input {
+    padding: 0.85rem 2.75rem 0.85rem 1rem;
+}
+
+.brand-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.brand-logo-link {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text-main);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+}
+
+/* --- Dark Mode Logo & Icon Visibility Fixes --- */
+[data-theme="dark"] .logo-img {
+    filter: brightness(1.25) drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
+}
+
+[data-theme="dark"] .brand-logo-link {
+    color: var(--text-main);
+}
+
+[data-theme="dark"] .input-icon {
+    color: var(--text-muted);
+}
+
+.page-main-heading {
+    font-family: var(--font-heading);
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.page-main-heading span {
+    background: linear-gradient(135deg, var(--accent-teal), var(--accent-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.visit-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    width: 100%;
+    max-width: 780px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card-back-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--accent-teal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    opacity: 0.85;
+}
+
+.card-top-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--accent-teal);
+    background: rgba(14, 116, 144, 0.15);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.35rem;
+}
+
+.card-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+    font-family: var(--font-heading);
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.input-icon.icon-textarea {
+    top: 1.2rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 2.75rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--input-bg);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: var(--accent-teal);
+}
+
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+textarea.form-input {
+    resize: vertical;
+    padding-top: 0.85rem;
+}
+
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent-teal), var(--accent-orange));
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 14px rgba(14, 116, 144, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4);
+}
+
+.form-footer-note {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.success-box {
+    display: none;
+    background: rgba(14, 116, 144, 0.15);
+    border: 1px solid var(--accent-teal);
+    color: var(--accent-teal);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.success-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .page-top-actions {
+        top: 1rem;
+        right: 1rem;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+    .page-main-heading {
+        font-size: 2rem;
+    }
+    .visit-card {
+        padding: 2rem 1.25rem;
+    }
+}

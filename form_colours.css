@@ -1,0 +1,30 @@
+:root {
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* Dark Mode Theme Variables */
+:root[data-theme="dark"] {
+    --bg-page: #0f111a;
+    --bg-card: #181b29;
+    --bg-card-hover: #21263b;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --border-color: #2e344e;
+    --input-bg: #21263b;
+    --accent-teal: #06b6d4;
+    --accent-orange: #f97316;
+}
+
+/* Light Mode Theme Variables */
+:root, :root[data-theme="light"] {
+    --bg-page: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f1f5f9;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+    --input-bg: #f1f5f9;
+    --accent-teal: #0e7490;
+    --accent-orange: #ea580c;
+}

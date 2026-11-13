@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roll & Realm | About Our Guild & Story</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="header_footer.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+        <!-- Header Logo Image (50px height) -->
+        <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Roll & Realm Logo" class="logo-img" style="height: 50px; width: auto; object-fit: contain;">
+        <div style="display: flex; flex-direction: column;">
+          <!-- Primary & Secondary Color-Split Title -->
+          <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+            ROLL & REALM
+          </span>
+          <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+            TABLETOP & HOBBY VAULT
+          </span>
+        </div>
+      </a>
+      
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li class="dropdown" id="homeDropdown">
+          <a href="index.html" class="active dropdown-toggle">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="gamenights.html">Game Nights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button id="rtlToggle" class="icon-btn" title="Toggle Text Direction">⇆</button>
+        <button id="themeToggle" class="icon-btn" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+        <a href="joingamenight.html" class="btn btn-secondary">Plan your Play</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 1: HERO BANNER -->
+  <section class="hero about-hero">
+    <div class="hero-container about-hero-container">
+      <div class="hero-content about-hero-content">
+        <span class="badge"><i class="fa-solid fa-shield-cat"></i> THE Roll & Realm LEGACY</span>
+        <h1 class="about-title">Crafted By Gamers, <br><span>For Discerning Adventurers</span></h1>
+        <p class="about-sub">Learn how a small group of tabletop enthusiasts built a sanctuary for immersive storytelling, tactical card tournaments, and community connection.</p>
+        
+        <div class="about-hero-buttons">
+          <a href="#story" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Read Our Story</a>
+          <a href="gamenights.html" class="btn btn-secondary"><i class="fa-solid fa-dice-d20"></i> Explore Arena</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: OUR ORIGIN STORY -->
+  <section class="container" id="story">
+    <div class="feature-split-grid">
+      <div class="feature-img-box">
+        <img src="images/7962aaa13ecdf8070769fff1e9ca7cd3.jpg" alt="PlayHaven Origins" class="split-img">
+      </div>
+      <div class="feature-text-content">
+        <span class="badge">OUR ORIGINS</span>
+        <h2 class="section-title about-story-title">From a Single Basement Table to a Global Community Hub</h2>
+        <p class="section-subtitle about-story-sub">
+          Founded in 2021, PlayHaven started as a weekend gathering of friends frustrated by cramped spaces and poorly organized tournament calendars. We envisioned a venue where every detail—from custom sound-dampened private rooms to balanced lighting—enhances the game.
+        </p>
+        <ul class="feature-check-list">
+          <li><i class="fa-solid fa-circle-check"></i> Built by veteran DMs, hobbyists, and competitive TCG players</li>
+          <li><i class="fa-solid fa-circle-check"></i> Dedicated to preserving authentic face-to-face tabletop culture</li>
+          <li><i class="fa-solid fa-circle-check"></i> Continuous expansion of modular terrain and rare game vaults</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CORE PILLARS / VALUES -->
+  <section class="container pillars-section">
+    <div class="section-header center-header">
+      <span class="badge"><i class="fa-solid fa-compass"></i> OUR GUIDING PRINCIPLES</span>
+      <h2 class="section-title">The Three Pillars of PlayHaven</h2>
+      <p class="section-subtitle">What drives every event we host and every product we curate.</p>
+    </div>
+
+    <div class="grid pillars-grid">
+      <div class="card pillar-card">
+        <div class="pillar-icon teal-icon"><i class="fa-solid fa-users-rectangle"></i></div>
+        <h3 class="card-title">Radical Inclusivity</h3>
+        <p class="pillar-desc">Whether you're picking up dice for the first time or running your 500th campaign, our tables welcome all backgrounds and skill levels.</p>
+      </div>
+
+      <div class="card pillar-card">
+        <div class="pillar-icon orange-icon"><i class="fa-solid fa-gem"></i></div>
+        <h3 class="card-title">Boutique Quality</h3>
+        <p class="pillar-desc">We reject flimsy components and chaotic rooms. Every seat offers pristine acoustics, custom terrain, and professional hosting.</p>
+      </div>
+
+      <div class="card pillar-card">
+        <div class="pillar-icon purple-icon"><i class="fa-solid fa-seedling"></i></div>
+        <h3 class="card-title">Community First</h3>
+        <p class="pillar-desc">We reinvest 20% of our event proceeds back into local prize pools, charity game days, and free youth introductory workshops.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: MEET THE GUILD MASTERS (TEAM) -->
+  <section class="container">
+    <div class="section-header center-header">
+      <span class="badge"><i class="fa-solid fa-id-badge"></i> THE LEADERSHIP GUILD</span>
+      <h2 class="section-title">Meet Our Founders & Dungeon Masters</h2>
+      <p class="section-subtitle">The veteran strategists keeping your campaigns running smoothly.</p>
+    </div>
+
+    <div class="grid team-grid">
+      <div class="card team-card">
+        <div class="team-avatar teal-border">
+          <img src="images/73cfa2ab634e9ffde08defc4d5d19cc4.jpg" alt="Arthur Pendelton">
+        </div>
+        <h3 class="card-title">Arthur Pendelton</h3>
+        <p class="team-role teal-text">Head Dungeon Master</p>
+        <p class="team-bio">Over 15 years of world-building experience. Specializes in dark fantasy campaigns and immersive puzzle rooms.</p>
+      </div>
+
+      <div class="card team-card">
+        <div class="team-avatar orange-border">
+          <img src="images/0a29b0160ee23f78bee0ffdef27e2d94.jpg" alt="Elena Rostova">
+        </div>
+        <h3 class="card-title">Elena Rostova</h3>
+        <p class="team-role orange-text">Tournament Coordinator</p>
+        <p class="team-bio">Competitive TCG judge and organizer of our Friday Night Deck Clashes with flawless scheduling precision.</p>
+      </div>
+
+      <div class="card team-card">
+        <div class="team-avatar purple-border">
+          <img src="images/62b216ba33ad193ccfe4225946fd51f7.jpg" alt="Liam Vance">
+        </div>
+        <h3 class="card-title">Liam Vance</h3>
+        <p class="team-role purple-text">Vault Curator & Buyer</p>
+        <p class="team-bio">Sourcing rare foil expansions, independent puzzle artisans, and premium miniature paint sets worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: ARENA STATS & MILESTONES -->
+  <section class="container milestones-banner">
+    <span class="badge glow-badge">BY THE NUMBERS</span>
+    <h2 class="milestones-title">PlayHaven Milestone Achievements</h2>
+    
+    <div class="grid stats-grid">
+      <div>
+        <div class="stat-number teal-text" data-target="1200" data-suffix="+">0</div>
+        <p class="stat-label">Campaign Sessions Hosted</p>
+      </div>
+      <div>
+        <div class="stat-number orange-text" data-target="5400" data-comma="true">0</div>
+        <p class="stat-label">Active Guild Members</p>
+      </div>
+      <div>
+        <div class="stat-number purple-text" data-target="150" data-suffix="+">0</div>
+        <p class="stat-label">Tournaments Completed</p>
+      </div>
+      <div>
+        <div class="stat-number green-text" data-target="99.8" data-decimal="1" data-suffix="%">0</div>
+        <p class="stat-label">Player Satisfaction Rate</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: AMENITIES & FACILITIES TOUR -->
+  <section class="container">
+    <div class="section-header center-header">
+      <span class="badge"><i class="fa-solid fa-house-laptop"></i> THE FACILITY</span>
+      <h2 class="section-title">Inside Our Custom Arena Headquarters</h2>
+      <p class="section-subtitle">Designed from the ground up for maximum gaming comfort.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-img-container">
+          <img src="images/deb864ee4338fb6cf59f6efba144cb73.jpg" alt="Acoustic Rooms" class="card-img">
+        </div>
+        <span class="card-tags">SOUND-DAMPENED</span>
+        <h3 class="card-title">Private Campaign Suites</h3>
+        <p class="facility-desc">Acoustically isolated rooms with adjustable mood lighting and digital battlemap screens.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img-container">
+          <img src="images/7059cb725a400b8bf9dd830a35dd4285.jpg" alt="Snack Bar" class="card-img">
+        </div>
+        <span class="card-tags">FUEL & REFRESH</span>
+        <h3 class="card-title">The Guild Snack & Coffee Bar</h3>
+        <p class="facility-desc">Gourmet espresso, craft sodas, and gaming fuel snacks to keep your energy high during raids.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img-container">
+          <img src="images/3bfb97fa944cf3297b268c1e244c42bf.jpg" alt="Paint Stations" class="card-img">
+        </div>
+        <span class="card-tags">HOBBY WORKSHOP</span>
+        <h3 class="card-title">Miniature Painting Lounge</h3>
+        <p class="facility-desc">Fully equipped wet palettes, professional daylight lamps, and precision hobby tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: FINAL CTA -->
+  <section class="container about-cta-section">
+    <div class="about-cta-box">
+      <span class="badge"><i class="fa-solid fa-dice-d20"></i> READY TO JOIN?</span>
+      <h2 class="section-title about-cta-title">Become Part of the PlayHaven Family</h2>
+      <p class="section-subtitle about-cta-sub">Secure your seat at our upcoming campaign tables or visit our storefront headquarters today.</p>
+      <div class="about-cta-buttons">
+        <a href="joingamenight.html" class="btn btn-primary"><i class="fa-solid fa-calendar-days"></i> Plan your Play</a>
+        <a href="contact.html" class="btn btn-secondary"><i class="fa-solid fa-headset"></i> Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+          <!-- Footer Logo Image (50px height) -->
+          <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Logo" class="footer-logo-img" style="height: 50px; width: auto; object-fit: contain;">
+          <div style="display: flex; flex-direction: column;">
+            <!-- Primary & Secondary Color-Split Title -->
+            <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+              ROLL & REALM
+            </span>
+            <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+              TABLETOP & HOBBY VAULT
+            </span>
+          </div>
+        </a>
+        <p>Roll & Realm helps tabletop enthusiasts and community players connect with advanced game scheduling systems — safe for your strategies, immersive for your campaigns, and brilliant every time.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Campaign Hosting</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Tabletop Rentals</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Hobby & Paint</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Custom 3D Printing</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Private Party Booking</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Rulebook Consultation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>RESOURCES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Blog</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">FAQ</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Support</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Rule Supplements</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Community Wiki</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Painter Guides</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">About Us</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Contact</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="products.html">Pricing & Store</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Our Guild Masters</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Store Locations</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Careers & Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CONTACT US</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-phone"></i> (123) 456-7890</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-envelope"></i> info@rollandrealm.com</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-map-marker-alt"></i> 123 Game Street, PlayCity</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-clock"></i> Mon-Sun: 10AM - 11PM</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-headset"></i> Live Guild Support</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-comments"></i> Discord Community Hub</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roll & Realm Tabletop & Hobby Hub. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="allfils.js"></script>
+</body>
+</html>

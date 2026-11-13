@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll & Realm | Register for Game Night</title>
+    <!-- Playfair Display & Lora Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="form_colours.css">
+    <link rel="stylesheet" href="joingamenight.css">
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        const savedDir = localStorage.getItem('dir') || 'ltr';
+        document.documentElement.setAttribute('dir', savedDir);
+    </script>
+</head>
+<body>
+
+    <!-- Floating Top-Right Controls (RTL & Theme Toggles) -->
+    <div class="page-top-actions">
+        <button id="rtlToggle" class="icon-btn" title="Toggle Text Direction">⇆</button>
+        <button id="themeToggle" class="icon-btn" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+    </div>
+
+    <div class="visit-card">
+        <div class="brand-header">
+            <a href="index.html" class="brand-logo-link">
+                <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Roll & Realm Logo" class="logo-img">
+                <div style="display: flex; flex-direction: column; text-align: left;">
+                    <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+                        ROLL & REALM
+                    </span>
+                    <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+                        TABLETOP & HOBBY VAULT
+                    </span>
+                </div>
+            </a>
+            
+            <h1 class="page-main-heading" style="margin-top: 1.5rem;">
+                Game Night <span>Registration</span>
+            </h1>
+            <p class="page-subtitle">
+                Sign up to join our upcoming Game Night tables. Enter your details below to reserve your slot.
+            </p>
+        </div>
+
+        <form id="gameNightForm" class="form-grid">
+            
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-phone input-icon"></i>
+                    <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="email" placeholder="you@example.com" required class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="gameDate">Game Night Date</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-calendar input-icon"></i>
+                    <input type="date" id="gameDate" required class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="playerCount">Number of Players</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-users input-icon"></i>
+                    <input type="number" id="playerCount" min="1" max="10" placeholder="e.g. 1" required class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="gameNotes">Notes &amp; Game Preferences</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-pen-to-square input-icon icon-textarea"></i>
+                    <textarea id="gameNotes" rows="4" placeholder="Let us know what board games or TCG formats you'd like to play..." class="form-input"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <button type="submit" class="submit-btn">Register for Game Night</button>
+                <div class="form-footer-note">
+                    <i class="fa-solid fa-shield-halved"></i> Your pass and confirmation details will be sent to your email.
+                </div>
+            </div>
+
+        </form>
+
+        <div id="successMessage" class="success-box">
+            <i class="fa-solid fa-circle-check success-icon"></i>
+            Registration Successful! See you at Game Night.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('gameNightForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+        });
+
+        const themeToggle = document.getElementById('themeToggle');
+        const rtlToggle = document.getElementById('rtlToggle');
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+        });
+
+        rtlToggle.addEventListener('click', () => {
+            const currentDir = document.documentElement.getAttribute('dir');
+            const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+            document.documentElement.setAttribute('dir', newDir);
+            localStorage.setItem('dir', newDir);
+        });
+
+        if (localStorage.getItem('theme') === 'dark') {
+            themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        }
+    </script>
+</body>
+</html>

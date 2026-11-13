@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll & Realm | Session Visit Request</title>
+    <!-- Playfair Display & Lora Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="form_colours.css">
+    <link rel="stylesheet" href="joingamenight.css">
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        const savedDir = localStorage.getItem('dir') || 'ltr';
+        document.documentElement.setAttribute('dir', savedDir);
+    </script>
+</head>
+<body>
+
+    <!-- Floating Top-Right Controls (RTL & Theme Toggles) -->
+    <div class="page-top-actions">
+        <button id="rtlToggle" class="icon-btn" title="Toggle Text Direction">⇆</button>
+        <button id="themeToggle" class="icon-btn" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+    </div>
+
+    <div class="visit-card">
+        <div class="brand-header">
+            <a href="index.html" class="brand-logo-link">
+                <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Roll & Realm Logo" class="logo-img">
+                <div style="display: flex; flex-direction: column; text-align: left;">
+                    <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+                        ROLL & REALM
+                    </span>
+                    <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+                        TABLETOP & HOBBY VAULT
+                    </span>
+                </div>
+            </a>
+            
+            <h1 class="page-main-heading" style="margin-top: 1.5rem;">
+                Let's Book Your <span>Table Session</span>.
+            </h1>
+            <p class="page-subtitle">
+                Share a few details about your group and what you'd like to play. We'll get everything ready for your visit.
+            </p>
+        </div>
+
+        <form id="visitRequestForm" class="form-grid">
+            
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-phone input-icon"></i>
+                    <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="email" placeholder="you@example.com" required class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="visitType">Session Type</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-sliders input-icon"></i>
+                    <select id="visitType" class="form-input" required>
+                        <option value="" disabled selected>Select session type</option>
+                        <option value="dnd">D&amp;D Campaign Table</option>
+                        <option value="tournament">TCG Tournament Clash</option>
+                        <option value="private">Private Room Reservation</option>
+                        <option value="casual">Open Social Board Game</option>
+                        <option value="other">Game Night Reservation</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="prefDate">Preferred Date</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-calendar input-icon"></i>
+                    <input type="date" id="prefDate" required class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="prefTime">Preferred Time</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-clock input-icon"></i>
+                    <select id="prefTime" class="form-input" required>
+                        <option value="" disabled selected>Select a time slot</option>
+                        <option value="morning">Morning (10:00 AM - 02:00 PM)</option>
+                        <option value="afternoon">Afternoon (02:30 PM - 06:30 PM)</option>
+                        <option value="evening">Evening (07:00 PM - 11:00 PM)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="visitorCount">Number of Players / Group Size</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-users input-icon"></i>
+                    <input type="number" id="visitorCount" min="1" placeholder="e.g. 4" required class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="visitNotes">Campaign or Gear Notes</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-pen-to-square input-icon icon-textarea"></i>
+                    <textarea id="visitNotes" rows="4" placeholder="Tell us about your campaign theme, DM requirements, or rental equipment needs..." class="form-input"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <button type="submit" class="submit-btn">Request Table Session</button>
+                <div class="form-footer-note">
+                    <i class="fa-solid fa-shield-halved"></i> Your information will only be used to contact you regarding your booking.
+                </div>
+            </div>
+
+        </form>
+
+        <div id="successMessage" class="success-box">
+            <i class="fa-solid fa-circle-check success-icon"></i>
+            Session request submitted successfully! Our Guild Master will review your details and reach out shortly.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('visitRequestForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+        });
+
+        const themeToggle = document.getElementById('themeToggle');
+        const rtlToggle = document.getElementById('rtlToggle');
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+        });
+
+        rtlToggle.addEventListener('click', () => {
+            const currentDir = document.documentElement.getAttribute('dir');
+            const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+            document.documentElement.setAttribute('dir', newDir);
+            localStorage.setItem('dir', newDir);
+        });
+
+        if (localStorage.getItem('theme') === 'dark') {
+            themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        }
+    </script>
+</body>
+</html>

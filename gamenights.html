@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roll & Realm | Live Game Nights & Community Arena</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="header_footer.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="gamenights.css">
+  <script>
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      
+      const savedDir = localStorage.getItem('dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+        <!-- Header Logo Image (50px height) -->
+        <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Roll & Realm Logo" class="logo-img" style="height: 50px; width: auto; object-fit: contain;">
+        <div style="display: flex; flex-direction: column;">
+          <!-- Primary & Secondary Color-Split Title -->
+          <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+            ROLL & REALM
+          </span>
+          <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+            TABLETOP & HOBBY VAULT
+          </span>
+        </div>
+      </a>
+      
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li class="dropdown" id="homeDropdown">
+          <a href="index.html" class="active dropdown-toggle">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="gamenights.html">Game Nights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button id="rtlToggle" class="icon-btn" title="Toggle Text Direction">⇆</button>
+        <button id="themeToggle" class="icon-btn" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+        <a href="joingamenight.html" class="btn btn-secondary">Plan your Play</a>
+      </div>
+    </div>
+  </header>
+  <section class="hero gamenights-hero">
+    <div class="gamenights-hero-container">
+      
+      <div class="hero-status-ticker">
+        <span class="status-indicator"></span>
+        <span class="status-text">ARENA ONLINE: 3 CAMPAIGN TABLES LIVE NOW</span>
+      </div>
+
+      <h1 class="gamenights-title">
+        STEP INTO THE <br>
+        <span class="highlight-text">COMMUNITY ARENA</span>
+      </h1>
+      
+      <p class="gamenights-sub">
+        Your portal to weekly D&D campaigns, competitive TCG deck clashes, and casual weekend board game socials. Grab a seat or book a private table with your guild.
+      </p>
+
+      <div class="hero-actions-row">
+        <a href="reg-gamenight.html" class="btn btn-primary"><i class="fa-solid fa-dice-d20"></i> Book Your Game Night</a>
+        <a href="#events" class="btn btn-secondary"><i class="fa-solid fa-shield-halved"></i> Reserve Event Seat</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="container" id="events">
+    <div class="section-header">
+      <div>
+        <span class="badge">WEEKLY SCHEDULE</span>
+        <h2 class="section-title">Featured Table Sessions</h2>
+        <p class="section-subtitle">Pick your realm, check available slots, and secure your place.</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="event-card">
+        <div class="event-date-tag">TUESDAY • 7:00 PM</div>
+        <h3 class="event-card-title">Shadows Over Eldoria D&D</h3>
+        <p class="event-desc">Ongoing episodic dark-fantasy campaign led by veteran Dungeon Master Arthur.</p>
+        <div class="event-footer">
+          <span class="event-slots"><i class="fa-solid fa-users"></i> 2 Slots Left</span>
+          <a href="contact.html" class="btn btn-secondary event-btn">Reserve Seat</a>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-date-tag">FRIDAY • 6:30 PM</div>
+        <h3 class="event-card-title">Friday Night Deck Clash</h3>
+        <p class="event-desc">Constructed deck tournament with booster pack prize pools and store credit.</p>
+        <div class="event-footer">
+          <span class="event-competitive"><i class="fa-solid fa-trophy"></i> Competitive</span>
+          <a href="contact.html" class="btn btn-secondary event-btn">Register</a>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-date-tag">SUNDAY • 2:00 PM</div>
+        <h3 class="event-card-title">Board Game & Coffee Brunch</h3>
+        <p class="event-desc">Casual morning gaming with free coffee refills and friendly game coaches.</p>
+        <div class="event-footer">
+          <span class="event-slots"><i class="fa-solid fa-mug-hot"></i> Open Social</span>
+          <a href="contact.html" class="btn btn-secondary event-btn">Join Table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container feature-split-section custom-border-section">
+    <div class="feature-split-grid">
+      <div class="feature-img-box">
+        <img src="images/290c7a2979931ee9702819e207adcbd9.jpg" alt="Tournament Atmosphere" class="split-img">
+      </div>
+
+      <div class="feature-text-content">
+        <span class="badge">ARENA ETIQUETTE</span>
+        <h2 class="section-title custom-heading">
+          What to Expect at <br><span class="accent-teal-text">PlayHaven Events</span>
+        </h2>
+        <p class="section-subtitle custom-margin-bottom">
+          Our hub provides a welcoming, immersive, and structured environment for both seasoned veterans and newcomers.
+        </p>
+
+        <ul class="feature-check-list">
+          <li><i class="fa-solid fa-circle-check"></i> Fully equipped gaming tables with custom terrain & lighting</li>
+          <li><i class="fa-solid fa-circle-check"></i> Experienced game hosts to explain rules and manage schedules</li>
+          <li><i class="fa-solid fa-circle-check"></i> On-site snack bar, coffee refills, and beverage service</li>
+          <li><i class="fa-solid fa-circle-check"></i> Exclusive member discounts on vault products on event nights</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="private-room-banner">
+      <span class="badge glow-badge">PRIVATE SESSIONS</span>
+      <h2>Want to Host Your Own Private Campaign?</h2>
+      <p>Book our sound-dampened private rooms for your birthday groups, corporate team building, or private D&D campaign parties.</p>
+      <a href="contact.html" class="btn btn-primary">Book Private Room</a>
+    </div>
+  </section>
+
+  <!-- STACKED TESTIMONIAL CAROUSEL SECTION WITH 3S AUTO-PLAY -->
+  <section class="container testimonial-section">
+    <!-- Stacked Card Carousel Wrapper -->
+    <div class="stacked-carousel-wrapper">
+        
+        <div class="stacked-carousel-track">
+            
+            <!-- Slide 1 -->
+            <div class="stacked-card-slide active">
+                <button class="carousel-nav-btn prev-btn" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="carousel-nav-btn next-btn" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+
+                <div class="testimonial-avatar">
+                    <img src="images/efdd9839f42baae662e5b78470d55c18.jpg" alt="Marcus & Elena Sterling">
+                </div>
+
+                <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+
+                <h3 class="testimonial-name">Marcus & Elena Sterling</h3>
+                <p class="testimonial-location">London, UK – Maldives Overwater Lagoon Sanctuary</p>
+
+                <p class="testimonial-quote">
+                    "PlayHaven organized our 10th anniversary honeymoon flawlessly! The private seaplane transfer, underwater dining, and the intuitive traveler dashboard with our downloadable boarding passes made this the most..."
+                </p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="stacked-card-slide">
+                <button class="carousel-nav-btn prev-btn" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="carousel-nav-btn next-btn" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+
+                <div class="testimonial-avatar">
+                    <img src="images/5e63af73d3940793a78a62f2331f6661.jpg" alt="Sarah Jenkins">
+                </div>
+
+                <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+
+                <h3 class="testimonial-name">Sarah Jenkins</h3>
+                <p class="testimonial-location">New York, USA – TCG Tournament Champion</p>
+
+                <p class="testimonial-quote">
+                    "The Friday night deck tournament was coordinated to absolute perfection. Clean tables, strict time management, and fantastic prize support made it unforgettable!"
+                </p>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="stacked-card-slide">
+                <button class="carousel-nav-btn prev-btn" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="carousel-nav-btn next-btn" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+
+                <div class="testimonial-avatar">
+                    <img src="images/de51aa846118d007114f21953229a82e.jpg" alt="David & Liam Vance">
+                </div>
+
+                <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+
+                <h3 class="testimonial-name">David & Liam Vance</h3>
+                <p class="testimonial-location">Toronto, Canada – Sunday Brunch Regulars</p>
+
+                <p class="testimonial-quote">
+                    "Free coffee refills, friendly game coaches, and an amazing library of board games make Sunday mornings our absolute favorite time of the week."
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="container" style="text-align: center; padding: 5rem 2rem;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <span class="badge"><i class="fa-solid fa-dice-d20"></i> READY TO ROLL?</span>
+      <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Take Your Campaign to the Next Level</h2>
+      <p class="section-subtitle" style="margin-bottom: 2rem;">Whether you're looking for custom terrain tables, rare vault expansions, or a dedicated group of players, PlayHaven has everything you need.</p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="joingamenight.html" class="btn btn-primary"><i class="fa-solid fa-calendar-days"></i> Plan your Play</a>
+        <a href="contact.html" class="btn btn-secondary"><i class="fa-solid fa-headset"></i> Contact Support</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER WITH 6 SERVICES -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+          <!-- Footer Logo Image (50px height) -->
+          <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Logo" class="footer-logo-img" style="height: 50px; width: auto; object-fit: contain;">
+          <div style="display: flex; flex-direction: column;">
+            <!-- Primary & Secondary Color-Split Title -->
+            <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+              ROLL & REALM
+            </span>
+            <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+              TABLETOP & HOBBY VAULT
+            </span>
+          </div>
+        </a>
+        <p>Roll & Realm helps tabletop enthusiasts and community players connect with advanced game scheduling systems — safe for your strategies, immersive for your campaigns, and brilliant every time.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Campaign Hosting</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Tabletop Rentals</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Hobby & Paint</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Custom 3D Printing</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Private Party Booking</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Rulebook Consultation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>RESOURCES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Blog</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">FAQ</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Support</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Rule Supplements</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Community Wiki</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Painter Guides</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">About Us</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Contact</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="products.html">Pricing & Store</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Our Guild Masters</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Store Locations</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Careers & Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CONTACT US</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-phone"></i> (123) 456-7890</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-envelope"></i> info@rollandrealm.com</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-map-marker-alt"></i> 123 Game Street, PlayCity</li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-clock"></i> Mon-Sun: 10AM - 11PM</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-headset"></i> Live Guild Support</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-comments"></i> Discord Community Hub</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roll & Realm Tabletop & Hobby Hub. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="allfils.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".stacked-card-slide");
+        const dots = document.querySelectorAll(".stacked-carousel-wrapper .dot");
+        const wrapper = document.querySelector(".stacked-carousel-wrapper");
+        let currentIndex = 0;
+        let autoPlayTimer = null;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === index);
+            });
+
+            dots.forEach((dot, i) => {
+                dot.classList.toggle("active", i === index);
+            });
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            let next = (currentIndex + 1) % slides.length;
+            showSlide(next);
+        }
+
+        function prevSlide() {
+            let prev = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(prev);
+        }
+
+        function startAutoPlay() {
+            stopAutoPlay();
+            autoPlayTimer = setInterval(nextSlide, 3000); // 3-second interval
+        }
+
+        function stopAutoPlay() {
+            if (autoPlayTimer) clearInterval(autoPlayTimer);
+        }
+
+        wrapper.querySelectorAll(".next-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                nextSlide();
+                startAutoPlay();
+            });
+        });
+
+        wrapper.querySelectorAll(".prev-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                prevSlide();
+                startAutoPlay();
+            });
+        });
+
+        dots.forEach((dot, idx) => {
+            dot.addEventListener("click", () => {
+                showSlide(idx);
+                startAutoPlay();
+            });
+        });
+
+        wrapper.addEventListener("mouseenter", stopAutoPlay);
+        wrapper.addEventListener("mouseleave", startAutoPlay);
+
+        if (slides.length > 0) {
+            showSlide(0);
+            startAutoPlay();
+        }
+    });
+  </script>
+</body>
+</html>

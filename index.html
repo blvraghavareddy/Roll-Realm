@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roll & Realm | Tabletop Games, Puzzles & Community</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="header_footer.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+        <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Roll & Realm Logo" class="logo-img" style="height: 50px; width: auto; object-fit: contain;">
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+            ROLL & REALM
+          </span>
+          <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+            TABLETOP & HOBBY VAULT
+          </span>
+        </div>
+      </a>
+      
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li class="dropdown" id="homeDropdown">
+          <a href="index.html" class="active dropdown-toggle">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="gamenights.html">Game Nights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button id="rtlToggle" class="icon-btn" title="Toggle Text Direction">⇆</button>
+        <button id="themeToggle" class="icon-btn" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+        <a href="joingamenight.html" class="btn btn-secondary">Plan your Play</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="badge"><i class="fa-solid fa-dice-d20"></i> PREMIER TABLETOP ARENA, RARE VAULT, & COMMUNITY GUILD</span>
+        <h1>Level Up Your <br><span>Roll & Realm</span></h1>
+        <p>Discover the latest board game releases, mind-bending puzzles, immersive card games, and a vibrant community of local players.</p>
+        <div class="hero-buttons">
+          <a href="joingamenight.html" class="btn btn-primary">Plan your Play</a>
+          <a href="gamenights.html" class="btn btn-secondary">View Events</a>
+        </div>
+      </div>
+
+      <div class="hero-banner-card">
+        <span class="badge">Featured Release</span>
+        <h2 style="font-family: var(--font-heading); margin-bottom: 0.5rem; font-size: 1.4rem;">CyberGrid: Tactics</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem;">A high-stakes deck-building strategy game for 2-4 players. Command rogue factions in a dystopian metropolis.</p>
+        <a href="products.html" class="btn btn-primary">Explore Game</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-header">
+      <div>
+        <span class="badge">Fresh Vault Arrivals</span>
+        <h2 class="section-title">New Releases</h2>
+        <p class="section-subtitle">Check out the newest tabletop additions in our store this week.</p>
+      </div>
+      <a href="products.html" class="btn btn-secondary">View All Products</a>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-img-container">
+          <img src="images/deb864ee4338fb6cf59f6efba144cb73.jpg" alt="CyberGrid: Tactics" class="card-img">
+        </div>
+        <span class="card-tags">BOARD GAME</span>
+        <h3 class="card-title">CyberGrid: Tactics</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">A high-stakes deck-building strategy game set in a dystopian city.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img-container">
+          <img src="images/7059cb725a400b8bf9dd830a35dd4285.jpg" alt="Aetherium Citadel" class="card-img">
+        </div>
+        <span class="card-tags">PUZZLE</span>
+        <h3 class="card-title">Aetherium Citadel</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Premium foil-accented fantasy artwork jigsaw puzzle.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img-container">
+          <img src="images/573c27d5e5df1fb89075a47faf066656.jpg" alt="Rogue Realms: Duel" class="card-img">
+        </div>
+        <span class="card-tags">CARD GAME</span>
+        <h3 class="card-title">Rogue Realms: Duel</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Fast-paced 2-player tactical card battler with starter decks.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img-container">
+          <img src="images/3bfb97fa944cf3297b268c1e244c42bf.jpg" alt="Miniature Painter Essentials" class="card-img">
+        </div>
+        <span class="card-tags">HOBBY KIT</span>
+        <h3 class="card-title">Miniature Painter</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Complete acrylic paint set with 12 paints, washes, and brushes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" style="background-color: var(--bg-card-hover); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="section-header">
+      <div>
+        <span class="badge">Community Hub</span>
+        <h2 class="section-title">Upcoming Game Nights</h2>
+        <p class="section-subtitle">Join fellow enthusiasts for campaign sessions, card tournaments, and open social tables.</p>
+      </div>
+      <a href="gamenights.html" class="btn btn-primary">Full Event Calendar</a>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-tags">THURSDAY • 7:00 PM</div>
+        <h3 class="card-title">D&D 5E Campaign Night</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">Venture into deep dungeons with veteran Dungeon Masters. All levels welcome.</p>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+          <span style="font-size: 0.85rem; color: var(--accent-teal); font-weight: 600;"><i class="fa-solid fa-users"></i> 4 Slots Left</span>
+          <a href="gamenights.html" class="btn btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">Reserve Seat</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-tags">FRIDAY • 6:30 PM</div>
+        <h3 class="card-title">CyberGrid Tournament</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">Test your deck-building skills in our weekly tournament for store prizes.</p>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+          <span style="font-size: 0.85rem; color: var(--accent-orange); font-weight: 600;"><i class="fa-solid fa-trophy"></i> Competitive</span>
+          <a href="gamenights.html" class="btn btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">Register</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-tags">SATURDAY • 2:00 PM</div>
+        <h3 class="card-title">Open Table Co-op Social</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">An afternoon dedicated to cooperative board games, casual puzzles, and teaching beginners.</p>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+          <span style="font-size: 0.85rem; color: var(--accent-teal); font-weight: 600;"><i class="fa-solid fa-mug-hot"></i> Casual Open</span>
+          <a href="gamenights.html" class="btn btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">Join Table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container feature-split-section">
+    <div class="feature-split-grid">
+      <div class="feature-img-box">
+        <img src="images/Gemini_Generated_Image_5ckll5ckll5ckll5.png" alt="Tabletop Community" class="split-img">
+      </div>
+
+      <div class="feature-text-content">
+        <span class="badge">Why Roll & Realm</span>
+        <h2 class="section-title" style="font-size: 2.2rem; line-height: 1.2; margin-bottom: 1rem;">
+          We Provide the Best Tabletop <br><span style="color: var(--accent-teal);">Experience For Your Campaign</span>
+        </h2>
+        <p class="section-subtitle" style="margin-bottom: 1.5rem;">
+          We connect enthusiastic players, tabletop collectors, and game masters with premium game nights, curated vaults, and a secure local community.
+        </p>
+
+        <ul class="feature-check-list">
+          <li><i class="fa-solid fa-circle-check"></i> Experienced & trained Dungeon Masters and hosts</li>
+          <li><i class="fa-solid fa-circle-check"></i> Transparent pricing with no hidden club fees</li>
+          <li><i class="fa-solid fa-circle-check"></i> Immersive event spaces with professional terrain</li>
+          <li><i class="fa-solid fa-circle-check"></i> 100% community satisfaction guarantee</li>
+        </ul>
+
+        <div style="margin-top: 2rem;">
+          <a href="gamenights.html" class="btn btn-primary">Join Game Night Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-header">
+      <div>
+        <span class="badge">EXPLORE CATEGORIES</span>
+        <h2 class="section-title">Find Your Gaming Style</h2>
+        <p class="section-subtitle">Browse through our specialized tabletop departments.</p>
+      </div>
+    </div>
+
+    <div class="flex-categories-container">
+      <div class="card flex-card">
+        <i class="fa-solid fa-dice-d20 fa-3x" style="color: var(--accent-teal); margin-bottom: 1rem;"></i>
+        <h3 class="card-title">Board Games</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Strategy, euro-games, cooperative campaigns, and party games.</p>
+        <a href="products.html" class="btn btn-secondary" style="font-size: 0.85rem; margin-top: auto;">Explore Board Games</a>
+      </div>
+
+      <div class="card flex-card">
+        <i class="fa-solid fa-puzzle-piece fa-3x" style="color: var(--accent-orange); margin-bottom: 1rem;"></i>
+        <h3 class="card-title">Puzzles</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">500-3000 piece artistic jigsaws, 3D mechanical puzzles & brain teasers.</p>
+        <a href="products.html" class="btn btn-secondary" style="font-size: 0.85rem; margin-top: auto;">Explore Puzzles</a>
+      </div>
+
+      <div class="card flex-card">
+        <i class="fa-solid fa-layer-group fa-3x" style="color: var(--accent-purple); margin-bottom: 1rem;"></i>
+        <h3 class="card-title">Card Games</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Trading card games, deck-builders, draft sets & protective sleeves.</p>
+        <a href="products.html" class="btn btn-secondary" style="font-size: 0.85rem; margin-top: auto;">Explore Card Games</a>
+      </div>
+
+      <div class="card flex-card">
+        <i class="fa-solid fa-paint-brush fa-3x" style="color: var(--accent-teal); margin-bottom: 1rem;"></i>
+        <h3 class="card-title">Hobby Kits</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Miniature paints, detail brushes, terrain modeling, and assembly tools.</p>
+        <a href="products.html" class="btn btn-secondary" style="font-size: 0.85rem; margin-top: auto;">Explore Hobby Kits</a>
+      </div>
+
+      <div class="card flex-card">
+        <i class="fa-solid fa-hat-wizard fa-3x" style="color: var(--accent-orange); margin-bottom: 1rem;"></i>
+        <h3 class="card-title">RPG Books & Dice</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Rulebooks, sourcebooks, custom resin dice sets, and DM screens.</p>
+        <a href="products.html" class="btn btn-secondary" style="font-size: 0.85rem; margin-top: auto;">Explore RPG Vault</a>
+      </div>
+
+      <div class="card flex-card">
+        <i class="fa-solid fa-chess-knight fa-3x" style="color: var(--accent-teal); margin-bottom: 1rem;"></i>
+        <h3 class="card-title">Wargaming</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Tabletop skirmish armies, battle mats, scenery & tactical rulebooks.</p>
+        <a href="products.html" class="btn btn-secondary" style="font-size: 0.85rem; margin-top: auto;">Explore Wargames</a>
+      </div>
+
+      <div class="card flex-card">
+        <i class="fa-solid fa-shield-halved fa-3x" style="color: var(--accent-purple); margin-bottom: 1rem;"></i>
+        <h3 class="card-title">Gaming Accessories</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Playmats, dice towers, deck boxes, and card organizers.</p>
+        <a href="products.html" class="btn btn-secondary" style="font-size: 0.85rem; margin-top: auto;">Explore Gear</a>
+      </div>
+
+      <div class="card flex-card">
+        <i class="fa-solid fa-ticket fa-3x" style="color: var(--accent-orange); margin-bottom: 1rem;"></i>
+        <h3 class="card-title">Event Passes</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Weekly tournament entry passes, paint workshops, and campaign passes.</p>
+        <a href="gamenights.html" class="btn btn-secondary" style="font-size: 0.85rem; margin-top: auto;">Explore Passes</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container custom-hover-section" style="background-color: var(--bg-card-hover); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="section-header center-header" style="text-align: center; display: block; margin-bottom: 3rem;">
+      <span class="badge"><i class="fa-solid fa-shield-halved"></i> VERIFIED PERFORMANCE • TABLETOP ROSTER</span>
+      <h2 class="section-title" style="font-size: 2.75rem;">Trusted By <span style="color: var(--accent-teal);">Champions</span></h2>
+      <p class="section-subtitle" style="max-width: 650px; margin: 0 auto;">Hear from veteran campaign masters, tournament champions, and hobby painters competing at the highest levels with Roll & Realm gear.</p>
+    </div>
+
+    <!-- 3-Column Testimonial Grid -->
+    <div class="testimonial-grid-layout">
+      
+      <!-- Card 1 -->
+      <div class="card testimonial-box">
+        
+        
+        <div class="testimonial-avatar-container">
+          <img src="images/2b98ae492c1845819f90e3c152457553.jpg" alt="Alex M." class="testimonial-avatar">
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div style="color: var(--accent-orange); font-size: 0.9rem; letter-spacing: 2px;">★★★★★</div>
+        </div>
+
+        <h3 class="testimonial-author-name">Alex M.</h3>
+        <p class="testimonial-author-title">INTERNATIONAL CAMPAIGN DM • 8,400+ HOURS</p>
+        <p class="testimonial-quote">"Roll & Realm's terrain and custom token sets gave my campaign a match-ready sweet spot right out of the box. The boundary detail is unlike anything I've wielded in 12 years of tabletop gaming."</p>
+      </div>
+
+      <!-- Card 2 (Highlighted Featured Card) -->
+      <div class="card testimonial-box featured-testimonial">
+        
+        
+        <div class="testimonial-avatar-container active-avatar">
+          <img src="images/8bd46b177629d8dad90fb47598eb66c9.jpg" alt="Priya R." class="testimonial-avatar">
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div style="color: var(--accent-orange); font-size: 0.9rem; letter-spacing: 2px;">★★★★★</div>
+        </div>
+
+        <h3 class="testimonial-author-name">Priya R.</h3>
+        <p class="testimonial-author-title">CHAMPIONS LEAGUE FINALIST • 42 TOURNAMENT WINS</p>
+        <p class="testimonial-quote">"The card stock stability and deck-box precision of the CyberGrid vault sets are surgical. Token balance is 100% predictable even during high-intensity tactical rounds."</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card testimonial-box">
+        
+        
+        <div class="testimonial-avatar-container">
+          <img src="images/3d750ff405ef3b0f07dc7e620c6904a9.jpg" alt="Marcus T." class="testimonial-avatar">
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div style="color: var(--accent-orange); font-size: 0.9rem; letter-spacing: 2px;">★★★★★</div>
+        </div>
+
+        <h3 class="testimonial-author-name">Marcus T.</h3>
+        <p class="testimonial-author-title">GOLD MEDAL PAINTER • WORLD MINIATURE RANK #14</p>
+        <p class="testimonial-quote">"The pigment consistency on the miniature paint sets gives instantaneous shadow-blend on fine-detail figures. My brush tip hasn't frayed across 6 straight convention builds."</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="container">
+    <div style="background: linear-gradient(135deg, var(--bg-card), var(--bg-card-hover)); border: 1px solid var(--border-color); border-radius: 20px; text-align: center; padding: 3rem 2rem;">
+      <span class="badge">Stay Connected</span>
+      <h2 class="section-title" style="margin-bottom: 0.5rem;">Join the Roll & Realm Guild</h2>
+      <p class="section-subtitle" style="max-width: 600px; margin: 0 auto 2rem auto;">Subscribe to get notified about secret game releases, tournament registrations, and exclusive store discounts.</p>
+
+      <form style="display: flex; justify-content: center; gap: 0.75rem; max-width: 500px; margin: 0 auto; flex-wrap: wrap;">
+        <input type="email" placeholder="Enter your email address..." required style="padding: 0.75rem 1.25rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-dark); color: var(--text-main); flex: 1; min-width: 240px; font-family: var(--font-body);">
+        <button type="submit" class="btn btn-primary">Join Guild</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+          <!-- Footer Logo Image (50px height) -->
+          <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Logo" class="footer-logo-img" style="height: 50px; width: auto; object-fit: contain;">
+          <div style="display: flex; flex-direction: column;">
+            <!-- Primary & Secondary Color-Split Title -->
+            <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+              ROLL & REALM
+            </span>
+            <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+              TABLETOP & HOBBY VAULT
+            </span>
+          </div>
+        </a>
+        <p>Roll & Realm helps tabletop enthusiasts and community players connect with advanced game scheduling systems — safe for your strategies, immersive for your campaigns, and brilliant every time.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Campaign Hosting</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Tabletop Rentals</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Hobby & Paint</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Custom 3D Printing</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Private Party Booking</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Rulebook Consultation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>RESOURCES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Blog</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">FAQ</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Support</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Rule Supplements</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Community Wiki</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Painter Guides</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">About Us</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Contact</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="products.html">Pricing & Store</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Our Guild Masters</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Store Locations</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Careers & Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CONTACT US</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-phone"></i> (123) 456-7890</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-envelope"></i> info@rollandrealm.com</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-map-marker-alt"></i> 123 Game Street, PlayCity</li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-clock"></i> Mon-Sun: 10AM - 11PM</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-headset"></i> Live Guild Support</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-comments"></i> Discord Community Hub</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roll & Realm Tabletop & Hobby Hub. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="allfils.js"></script>
+</body>
+</html>

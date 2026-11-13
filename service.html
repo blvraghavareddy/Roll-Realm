@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roll & Realm | Tabletop Services & Campaign Hosting</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="header_footer.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="service.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+        <!-- Header Logo Image (50px height) -->
+        <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Roll & Realm Logo" class="logo-img" style="height: 50px; width: auto; object-fit: contain;">
+        <div style="display: flex; flex-direction: column;">
+          <!-- Primary & Secondary Color-Split Title -->
+         <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+            ROLL & REALM
+          </span>
+          <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+            TABLETOP & HOBBY VAULT
+          </span>
+        </div>
+      </a>
+      
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li class="dropdown" id="homeDropdown">
+          <a href="index.html" class="active dropdown-toggle">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="gamenights.html">Game Nights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button id="rtlToggle" class="icon-btn" title="Toggle Text Direction">⇆</button>
+        <button id="themeToggle" class="icon-btn" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+        <a href="joingamenight.html" class="btn btn-secondary">Plan your Play</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero service-hero">
+    <div class="hero-container service-hero-container">
+      <div class="hero-content service-hero-content">
+        <span class="badge"><i class="fa-solid fa-wand-magic-sparkles"></i> PROFESSIONAL TABLETOP SOLUTIONS</span>
+        <h1 class="service-title">Elevate Your Campaigns & <br><span>Hobby Workshops</span></h1>
+        <p class="service-sub">From expert Dungeon Master campaign hosting and custom terrain rentals to professional miniature painting masterclasses, explore our professional hub services.</p>
+        
+        <div class="service-hero-buttons">
+          <a href="#offerings" class="btn btn-primary"><i class="fa-solid fa-layer-group"></i> Explore Services</a>
+          <a href="contact.html" class="btn btn-secondary"><i class="fa-solid fa-calendar-check"></i> Book Session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="offerings">
+    <div class="section-header">
+      <div>
+        <span class="badge">OUR OFFERINGS</span>
+        <h2 class="section-title">Hub Services & Packages</h2>
+        <p class="section-subtitle">Tailored packages designed for casual gaming groups, collectors, and tournament organizers.</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Service 1 -->
+      <div class="card service-card">
+        <div class="service-icon-box">
+          <i class="fa-solid fa-shield-cat"></i>
+        </div>
+        <span class="card-tags">FLAGSHIP SERVICE</span>
+        <h3 class="card-title">Campaign Hosting & DM Booking</h3>
+        <p class="service-card-desc">Professional Dungeon Masters, atmospheric soundscapes, and sound-dampened private rooms for your weekly D&D campaigns.</p>
+        <div class="service-price-tag">From $25 / Session</div>
+        <a href="contact.html" class="btn btn-secondary service-btn">Book Campaign Table</a>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="card service-card">
+        <div class="service-icon-box orange-icon">
+          <i class="fa-solid fa-dice-d20"></i>
+        </div>
+        <span class="card-tags">RENTALS</span>
+        <h3 class="card-title">Tabletop & Terrain Rentals</h3>
+        <p class="service-card-desc">Rent complete modular resin terrain sets, neoprene battle mats, and rare board game titles for your weekend home events.</p>
+        <div class="service-price-tag">From $15 / Weekend</div>
+        <a href="contact.html" class="btn btn-secondary service-btn">Request Rental Gear</a>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="card service-card">
+        <div class="service-icon-box purple-icon">
+          <i class="fa-solid fa-paintbrush"></i>
+        </div>
+        <span class="card-tags">WORKSHOPS</span>
+        <h3 class="card-title">Miniature Painting Masterclass</h3>
+        <p class="service-card-desc">Hands-on weekend masterclasses covering brush control, zenithal airbrushing, and rapid speedpaint shading techniques.</p>
+        <div class="service-price-tag">From $45 / Workshop</div>
+        <a href="contact.html" class="btn btn-secondary service-btn">Reserve Workshop Spot</a>
+      </div>
+
+      <!-- Service 4 (NEW) -->
+      <div class="card service-card">
+        <div class="service-icon-box">
+          <i class="fa-solid fa-trophy"></i>
+        </div>
+        <span class="card-tags">COMPETITIVE</span>
+        <h3 class="card-title">Tournament & League Hosting</h3>
+        <p class="service-card-desc">Structured bracket management, certified judges, and prize pool curation for TCG, wargaming, and strategy board game leagues.</p>
+        <div class="service-price-tag">From $10 / Entry</div>
+        <a href="gamenights.html" class="btn btn-secondary service-btn">Register League</a>
+      </div>
+
+      <!-- Service 5 (NEW) -->
+      <div class="card service-card">
+        <div class="service-icon-box orange-icon">
+          <i class="fa-solid fa-cubes"></i>
+        </div>
+        <span class="card-tags">CUSTOM FABRICATION</span>
+        <h3 class="card-title">Custom Terrain & 3D Printing</h3>
+        <p class="service-card-desc">High-resolution resin miniature printing and bespoke modular dungeon tiles tailored to your campaign maps and faction themes.</p>
+        <div class="service-price-tag">From $30 / Commission</div>
+        <a href="contact.html" class="btn btn-secondary service-btn">Request Custom Print</a>
+      </div>
+
+      <!-- Service 6 (NEW) -->
+      <div class="card service-card">
+        <div class="service-icon-box purple-icon">
+          <i class="fa-solid fa-champagne-glasses"></i>
+        </div>
+        <span class="card-tags">GROUP EVENTS</span>
+        <h3 class="card-title">Private Event & Party Packages</h3>
+        <p class="service-card-desc">Exclusive lounge buyouts, dedicated game coaches, and curated party game libraries for birthdays, guild meetups, and corporate events.</p>
+        <div class="service-price-tag">From $150 / Event</div>
+        <a href="contact.html" class="btn btn-secondary service-btn">Book Private Event</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container feature-split-section service-split-bg">
+    <div class="feature-split-grid">
+      <div class="feature-img-box">
+        <img src="images/000f171b52233f68f0c7736fb87e35bd.jpg" alt="Professional Tabletop Setup" class="split-img">
+      </div>
+
+      <div class="feature-text-content">
+        <span class="badge">THE PLAYHAVEN ADVANTAGE</span>
+        <h2 class="section-title service-split-heading">
+          Engineered for Ultimate <br><span class="accent-teal-text">Immersive Gameplay</span>
+        </h2>
+        <p class="section-subtitle service-split-sub">
+          We combine top-tier physical infrastructure with experienced community hosts to deliver flawless tabletop sessions every time.
+        </p>
+
+        <ul class="feature-check-list">
+          <li><i class="fa-solid fa-circle-check"></i> Custom LED atmospheric lighting synced with campaign moods</li>
+          <li><i class="fa-solid fa-circle-check"></i> High-density acoustic foam private rooms for zero distractions</li>
+          <li><i class="fa-solid fa-circle-check"></i> On-site rulebook libraries and digital companion displays</li>
+          <li><i class="fa-solid fa-circle-check"></i> Dedicated setup and cleanup assistance by our floor staff</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-header center-header">
+      <span class="badge">MEMBERSHIP TIERS</span>
+      <h2 class="section-title">Guild Service Passes</h2>
+      <p class="section-subtitle">Choose a recurring pass to unlock permanent discounts on table bookings and gear rentals.</p>
+    </div>
+
+    <div class="grid pricing-grid">
+      <div class="card pricing-card">
+        <h3 class="card-title">Initiate Pass</h3>
+        <div class="tier-price">Free</div>
+        <p class="service-card-desc">For casual walk-ins and community open tables.</p>
+        <ul class="tier-features">
+          <li><i class="fa-solid fa-check"></i> Access to open social tables</li>
+          <li><i class="fa-solid fa-check"></i> Newsletter updates & drops</li>
+          <li><i class="fa-solid fa-check"></i> Standard store pricing</li>
+        </ul>
+        <a href="contact.html" class="btn btn-secondary pricing-btn">Get Started</a>
+      </div>
+
+      <div class="card pricing-card popular-tier">
+        <span class="popular-badge">MOST POPULAR</span>
+        <h3 class="card-title">Guild Veteran Pass</h3>
+        <div class="tier-price">$29<span> / mo</span></div>
+        <p class="service-card-desc">For regular campaigners and weekly tournament players.</p>
+        <ul class="tier-features">
+          <li><i class="fa-solid fa-check"></i> Free monthly table reservations</li>
+          <li><i class="fa-solid fa-check"></i> 15% off vault store products</li>
+          <li><i class="fa-solid fa-check"></i> Priority tournament seating</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary pricing-btn">Claim Veteran Pass</a>
+      </div>
+
+      <div class="card pricing-card">
+        <h3 class="card-title">Master DM Pass</h3>
+        <div class="tier-price">$59<span> / mo</span></div>
+        <p class="service-card-desc">For dedicated game masters running multi-table campaigns.</p>
+        <ul class="tier-features">
+          <li><i class="fa-solid fa-check"></i> Unlimited private room access</li>
+          <li><i class="fa-solid fa-check"></i> Free terrain & mat rentals</li>
+          <li><i class="fa-solid fa-check"></i> 20% off all hobby supplies</li>
+        </ul>
+        <a href="contact.html" class="btn btn-secondary pricing-btn">Go Master</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: How It Works (3-Step Booking Process) -->
+  <section class="container" style="background-color: var(--bg-card-hover); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); margin-top: 3rem;">
+    <div class="section-header center-header">
+      <span class="badge">SIMPLE BOOKING</span>
+      <h2 class="section-title">How PlayHaven Services Work</h2>
+      <p class="section-subtitle">Reserve your campaign room, rental gear, or workshop seat in three easy steps.</p>
+    </div>
+
+    <div class="grid" style="margin-top: 2.5rem;">
+      <div class="card service-card">
+        <div class="service-icon-box">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+        <span class="card-tags">STEP 01</span>
+        <h3 class="card-title">Choose Your Experience</h3>
+        <p class="service-card-desc">Select from private DM-hosted campaign tables, weekend modular terrain rentals, or hands-on miniature painting workshops.</p>
+      </div>
+
+      <div class="card service-card">
+        <div class="service-icon-box orange-icon">
+          <i class="fa-solid fa-calendar-days"></i>
+        </div>
+        <span class="card-tags">STEP 02</span>
+        <h3 class="card-title">Lock In Your Schedule</h3>
+        <p class="service-card-desc">Pick your preferred date, party size, and custom table setup—including atmospheric LED lighting and rulebook kits.</p>
+      </div>
+
+      <div class="card service-card">
+        <div class="service-icon-box purple-icon">
+          <i class="fa-solid fa-dice-d20"></i>
+        </div>
+        <span class="card-tags">STEP 03</span>
+        <h3 class="card-title">Arrive & Roll</h3>
+        <p class="service-card-desc">Show up with your party. Our floor hosts handle all table setup, terrain placement, and cleanup so you can focus on the game.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Call to Action Section -->
+  <section class="container" style="text-align: center; padding: 5rem 2rem;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <span class="badge"><i class="fa-solid fa-headset"></i> BOOK YOUR EXPERIENCE</span>
+      <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Host Your Next Epic Session?</h2>
+      <p class="section-subtitle" style="margin-bottom: 2rem;">Reserve your private campaign room, inquire about custom rental gear, or speak with our team to plan your next game night.</p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="joingamenight.html" class="btn btn-primary"><i class="fa-solid fa-calendar-days"></i> Plan your Play</a>
+        <a href="contact.html" class="btn btn-secondary"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+          <!-- Footer Logo Image (50px height) -->
+          <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Logo" class="footer-logo-img" style="height: 50px; width: auto; object-fit: contain;">
+          <div style="display: flex; flex-direction: column;">
+            <!-- Primary & Secondary Color-Split Title -->
+            <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+              ROLL & REALM
+            </span>
+            <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+              TABLETOP & HOBBY VAULT
+            </span>
+          </div>
+        </a>
+        <p>Roll & Realm helps tabletop enthusiasts and community players connect with advanced game scheduling systems — safe for your strategies, immersive for your campaigns, and brilliant every time.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Campaign Hosting</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Tabletop Rentals</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Hobby & Paint</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Custom 3D Printing</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Private Party Booking</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Rulebook Consultation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>RESOURCES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Blog</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">FAQ</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Support</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Rule Supplements</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Community Wiki</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Painter Guides</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">About Us</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Contact</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="products.html">Pricing & Store</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Our Guild Masters</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Store Locations</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Careers & Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CONTACT US</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-phone"></i> (123) 456-7890</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-envelope"></i> info@rollandrealm.com</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-map-marker-alt"></i> 123 Game Street, PlayCity</li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-clock"></i> Mon-Sun: 10AM - 11PM</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-headset"></i> Live Guild Support</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-comments"></i> Discord Community Hub</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roll & Realm Tabletop & Hobby Hub. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="allfils.js"></script>
+</body>
+</html>

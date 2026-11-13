@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roll & Realm | Tabletop Store & Vault Catalog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="header_footer.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+        <!-- Header Logo Image (50px height) -->
+        <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Roll & Realm Logo" class="logo-img" style="height: 50px; width: auto; object-fit: contain;">
+        <div style="display: flex; flex-direction: column;">
+          <!-- Primary & Secondary Color-Split Title -->
+          <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+            ROLL & REALM
+          </span>
+          <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+            TABLETOP & HOBBY VAULT
+          </span>
+        </div>
+      </a>
+      
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li class="dropdown" id="homeDropdown">
+          <a href="index.html" class="active dropdown-toggle">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="gamenights.html">Game Nights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button id="rtlToggle" class="icon-btn" title="Toggle Text Direction">⇆</button>
+        <button id="themeToggle" class="icon-btn" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+        <a href="joingamenight.html" class="btn btn-secondary">Plan your Play</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="store-hero">
+    <div class="store-hero-container">
+      <span class="badge"><i class="fa-solid fa-store"></i> Roll & Realm VAULT STORE</span>
+      <h1 class="store-hero-title">EXPLORE THE TABLETOP <br><span class="gradient-text">CATALOG</span></h1>
+      <p class="store-hero-sub">Browse rare board games, handmade resin dice, card expansions, and hobby paint supplies.</p>
+      
+      <div class="store-search-box">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="productSearch" placeholder="Search games, dice sets, miniatures..." class="search-input">
+        </div>
+        <div class="filter-pills" id="filterPills">
+          <button class="pill-btn active" data-filter="all">All Items</button>
+          <button class="pill-btn" data-filter="BOARD GAME">Board Games</button>
+          <button class="pill-btn" data-filter="DICE & RPG">Dice & RPG</button>
+          <button class="pill-btn" data-filter="CARD GAME">Card Decks</button>
+          <button class="pill-btn" data-filter="HOBBY KIT">Paints & Kits</button>
+          <button class="pill-btn" data-filter="ACCESSORY">Accessories</button>
+          <button class="pill-btn" data-filter="PUZZLE">Puzzles</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-header">
+      <div>
+        <span class="badge">CURATED VAULT</span>
+        <h2 class="section-title">Featured Collections</h2>
+        <p class="section-subtitle">Handpicked categories tailored for casual nights and competitive tournaments.</p>
+      </div>
+    </div>
+
+    <div class="collections-grid">
+      <div class="collection-card">
+        <i class="fa-solid fa-chess-king collection-icon"></i>
+        <h3>Strategy Eurogames</h3>
+        <p>Complex resource management and civilization builders.</p>
+        <a href="#catalog" class="collection-link">Browse Collection →</a>
+      </div>
+
+      <div class="collection-card">
+        <i class="fa-solid fa-dice-d20 collection-icon" style="color: var(--accent-orange);"></i>
+        <h3>Resin & Metal Dice</h3>
+        <p>Sharp-edge liquid core sets and heavy alloy polyhedrals.</p>
+        <a href="#catalog" class="collection-link">Browse Collection →</a>
+      </div>
+
+      <div class="collection-card">
+        <i class="fa-solid fa-paint-roller collection-icon" style="color: var(--accent-purple);"></i>
+        <h3>Hobby Paints & Washing</h3>
+        <p>Acrylic sets, speedpaints, and precision detail brushes.</p>
+        <a href="#catalog" class="collection-link">Browse Collection →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="catalog">
+    <div class="section-header">
+      <div>
+        <span class="badge">ALL PRODUCTS</span>
+        <h2 class="section-title">Vault Store Catalog</h2>
+        <p class="section-subtitle">Showing top items available for immediate in-store pickup or delivery.</p>
+      </div>
+    </div>
+
+    <div class="grid" id="productGrid">
+      <div class="card product-card" data-category="BOARD GAME">
+        <div class="card-img-container">
+          <img src="images/b564e2f652c8c3308106de93ea6c2795.jpg" alt="CyberGrid Tactics" class="card-img">
+        </div>
+        <span class="card-tags">BOARD GAME</span>
+        <h3 class="card-title">CyberGrid: Core Box</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Includes 4 starter factions, game board, and 250+ foil cards.</p>
+        <div class="product-footer">
+          <div class="card-price">$59.99</div>
+          <button class="btn btn-primary add-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
+        </div>
+      </div>
+
+      <div class="card product-card" data-category="DICE & RPG">
+        <div class="card-img-container">
+          <img src="images/efdd9839f42baae662e5b78470d55c18.jpg" alt="Resin Dice Set" class="card-img">
+        </div>
+        <span class="card-tags">DICE & RPG</span>
+        <h3 class="card-title">Resin D20 Liquid Core Set</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Handmade sharp-edge resin polyhedral 7-piece dice set.</p>
+        <div class="product-footer">
+          <div class="card-price">$29.99</div>
+          <button class="btn btn-primary add-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
+        </div>
+      </div>
+
+      <div class="card product-card" data-category="CARD GAME">
+        <div class="card-img-container">
+          <img src="images/5e63af73d3940793a78a62f2331f6661.jpg" alt="Rogue Realms Duel" class="card-img">
+        </div>
+        <span class="card-tags">CARD GAME</span>
+        <h3 class="card-title">Rogue Realms: Duel Starter</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Fast-paced 2-player tactical card battler with tokens.</p>
+        <div class="product-footer">
+          <div class="card-price">$24.99</div>
+          <button class="btn btn-primary add-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
+        </div>
+      </div>
+
+      <div class="card product-card" data-category="HOBBY KIT">
+        <div class="card-img-container">
+          <img src="images/f01079212990b3aaec58a0e58e581058.jpg" alt="Speedpaint Kit" class="card-img">
+        </div>
+        <span class="card-tags">HOBBY KIT</span>
+        <h3 class="card-title">Speedpaint Mega Set (24 Paints)</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Single-coat acrylic washes for shading gaming miniatures.</p>
+        <div class="product-footer">
+          <div class="card-price">$44.99</div>
+          <button class="btn btn-primary add-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
+        </div>
+      </div>
+
+      <div class="card product-card" data-category="ACCESSORY">
+        <div class="card-img-container">
+          <img src="images/de51aa846118d007114f21953229a82e.jpg" alt="Neoprene Playmat" class="card-img">
+        </div>
+        <span class="card-tags">ACCESSORY</span>
+        <h3 class="card-title">Neoprene Battle Mat 3x3</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Stitched-edge non-slip terrain playmat with grid overlay.</p>
+        <div class="product-footer">
+          <div class="card-price">$39.99</div>
+          <button class="btn btn-primary add-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
+        </div>
+      </div>
+
+      <div class="card product-card" data-category="PUZZLE">
+        <div class="card-img-container">
+          <img src="images/6dd28ca3b5961158192f5233683cea34.jpg" alt="Aetherium Citadel Puzzle" class="card-img">
+        </div>
+        <span class="card-tags">PUZZLE</span>
+        <h3 class="card-title">Aetherium Citadel (1000pc)</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Premium foil fantasy illustration jigsaw puzzle.</p>
+        <div class="product-footer">
+          <div class="card-price">$19.99</div>
+          <button class="btn btn-primary add-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
+        </div>
+      </div>
+
+      <div class="card product-card" data-category="ACCESSORY">
+        <div class="card-img-container">
+          <img src="images/aad53a045bb4947a0e673810bfa7462f.jpg" alt="Leather Dice Tower" class="card-img">
+        </div>
+        <span class="card-tags">ACCESSORY</span>
+        <h3 class="card-title">Collapsible Leather Dice Tower</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Felt-lined folding dice tower with integrated rolling tray.</p>
+        <div class="product-footer">
+          <div class="card-price">$34.99</div>
+          <button class="btn btn-primary add-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
+        </div>
+      </div>
+
+      <div class="card product-card" data-category="DICE & RPG">
+        <div class="card-img-container">
+          <img src="images/b917e0585089b16fbf3b93ae7d34bebf.jpg" alt="Metallic Bronze D6 Set" class="card-img">
+        </div>
+        <span class="card-tags">DICE & RPG</span>
+        <h3 class="card-title">Metallic Bronze D6 Set (12pc)</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Heavyweight metal six-sided dice for wargaming & skirmishes.</p>
+        <div class="product-footer">
+          <div class="card-price">$21.99</div>
+          <button class="btn btn-primary add-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="promo-box">
+      <div class="promo-text">
+        <span class="badge" style="background: rgba(255, 255, 255, 0.2); color: #fff;">GUILD PERK</span>
+        <h2>Get 15% Off Your First Vault Order</h2>
+        <p>Join the PlayHaven Guild newsletter or attend any game night session to unlock store member pricing on all board games and dice sets.</p>
+      </div>
+      <a href="contact.html" class="btn btn-secondary promo-btn">Claim Discount Pass</a>
+    </div>
+  </section>
+
+  <section class="container pricing-section">
+    <div class="section-header center-header" style="text-align: center; display: block; margin-bottom: 3rem;">
+      <span class="badge"><i class="fa-solid fa-ticket"></i> GUILD MEMBERSHIPS</span>
+      <h2 class="section-title" style="font-size: 2.75rem;">Choose Your <span style="color: var(--accent-teal);">Access Pass</span></h2>
+      <p class="section-subtitle" style="max-width: 650px; margin: 0 auto;">Unlock unlimited table reservations, rental vault discounts, and exclusive tournament entry.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Tier 1 -->
+      <div class="card pricing-card">
+        <span class="pricing-badge">CASUAL</span>
+        <h3 class="pricing-title">Adventurer</h3>
+        <div class="pricing-cost">$15<span class="pricing-duration">/month</span></div>
+        <p class="pricing-desc">Perfect for weekend players and casual drop-in sessions.</p>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> 2 Open Table Sessions /mo</li>
+          <li><i class="fa-solid fa-check"></i> 10% Off Board Game Rentals</li>
+          <li><i class="fa-solid fa-check"></i> Community Discord Access</li>
+        </ul>
+        <a href="contact.html" class="btn btn-secondary" style="width: 100%; text-align: center; margin-top: auto;">Join Pass</a>
+      </div>
+
+      <!-- Tier 2 (Highlighted) -->
+      <div class="card pricing-card pricing-card-featured">
+        <span class="pricing-badge featured-badge">MOST POPULAR</span>
+        <h3 class="pricing-title">Guild Master</h3>
+        <div class="pricing-cost">$35<span class="pricing-duration">/month</span></div>
+        <p class="pricing-desc">Designed for dedicated campaigners and tournament regulars.</p>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> Unlimited Open Table Access</li>
+          <li><i class="fa-solid fa-check"></i> Free Weekend Game Rentals</li>
+          <li><i class="fa-solid fa-check"></i> Priority Tournament Seating</li>
+          <li><i class="fa-solid fa-check"></i> 15% Off Store Merchandise</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: auto;">Secure Pass</a>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="card pricing-card">
+        <span class="pricing-badge">VIP COLLECTOR</span>
+        <h3 class="pricing-title">Legendary Vault</h3>
+        <div class="pricing-cost">$75<span class="pricing-duration">/month</span></div>
+        <p class="pricing-desc">The ultimate tier for hardcore miniature hobbyists and collectors.</p>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> Private Campaign Room Booking</li>
+          <li><i class="fa-solid fa-check"></i> Free Monthly Hobby Paint Kit</li>
+          <li><i class="fa-solid fa-check"></i> Free Custom 3D Printing Slots</li>
+          <li><i class="fa-solid fa-check"></i> 25% Off Entire Vault Store</li>
+        </ul>
+        <a href="contact.html" class="btn btn-secondary" style="width: 100%; text-align: center; margin-top: auto;">Claim Legend</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW CTA SECTION ADDED AT LAST -->
+  <section class="container" style="text-align: center; padding: 5rem 2rem;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <span class="badge"><i class="fa-solid fa-dice-d20"></i> READY TO ROLL?</span>
+      <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Take Your Campaign to the Next Level</h2>
+      <p class="section-subtitle" style="margin-bottom: 2rem;">Whether you're looking for custom terrain tables, rare vault expansions, or a dedicated group of players, PlayHaven has everything you need.</p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="joingamenight.html" class="btn btn-primary"><i class="fa-solid fa-calendar-days"></i> Plan your Play</a>
+        <a href="contact.html" class="btn btn-secondary"><i class="fa-solid fa-headset"></i> Contact Support</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+          <!-- Footer Logo Image (50px height) -->
+          <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Logo" class="footer-logo-img" style="height: 50px; width: auto; object-fit: contain;">
+          <div style="display: flex; flex-direction: column;">
+            <!-- Primary & Secondary Color-Split Title -->
+            <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+              ROLL & REALM
+            </span>
+            <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+              TABLETOP & HOBBY VAULT
+            </span>
+          </div>
+        </a>
+        <p>Roll & Realm helps tabletop enthusiasts and community players connect with advanced game scheduling systems — safe for your strategies, immersive for your campaigns, and brilliant every time.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Campaign Hosting</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Tabletop Rentals</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Hobby & Paint</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Custom 3D Printing</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Private Party Booking</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Rulebook Consultation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>RESOURCES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Blog</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">FAQ</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Support</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Rule Supplements</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Community Wiki</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Painter Guides</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">About Us</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Contact</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="products.html">Pricing & Store</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Our Guild Masters</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Store Locations</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Careers & Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CONTACT US</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-phone"></i> (123) 456-7890</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-envelope"></i> info@rollandrealm.com</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-map-marker-alt"></i> 123 Game Street, PlayCity</li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-clock"></i> Mon-Sun: 10AM - 11PM</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-headset"></i> Live Guild Support</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-comments"></i> Discord Community Hub</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roll & Realm Tabletop & Hobby Hub. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="allfils.js"></script>
+
+</body>
+</html>

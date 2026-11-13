@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roll & Realm | Contact & Guild Enquiry Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="header_footer.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+        <!-- Header Logo Image (50px height) -->
+        <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Roll & Realm Logo" class="logo-img" style="height: 50px; width: auto; object-fit: contain;">
+        <div style="display: flex; flex-direction: column;">
+          <!-- Primary & Secondary Color-Split Title -->
+          <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+            ROLL & REALM
+          </span>
+          <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+            TABLETOP & HOBBY VAULT
+          </span>
+        </div>
+      </a>
+      
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li class="dropdown" id="homeDropdown">
+          <a href="index.html" class="active dropdown-toggle">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="gamenights.html">Game Nights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button id="rtlToggle" class="icon-btn" title="Toggle Text Direction">⇆</button>
+        <button id="themeToggle" class="icon-btn" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+        <a href="joingamenight.html" class="btn btn-secondary">Plan your Play</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero contact-hero">
+    <div class="hero-container contact-hero-container">
+      <div class="hero-content contact-hero-content">
+        <span class="badge"><i class="fa-solid fa-envelope-open-text"></i> GET IN TOUCH</span>
+        <h1 class="contact-title">Connect With The <br><span>Roll & Realm Guild Hub</span></h1>
+        <p class="contact-sub">Have a question about table bookings, private campaign hosting, or store product availability? Send us a message or visit our lounge.</p>
+        
+        <div class="contact-hero-buttons">
+          <a href="#enquiryForm" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Enquiry</a>
+          <a href="service.html" class="btn btn-secondary"><i class="fa-solid fa-shield-cat"></i> View Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="contact-grid">
+      
+      <div class="card contact-form-card">
+        <span class="badge">ENQUIRY DESK</span>
+        <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Send Us a Message</h2>
+        
+        <form class="enquiry-form" id="enquiryForm">
+          <div class="form-group">
+            <label for="fullName">Your Name</label>
+            <input type="text" id="fullName" placeholder="Enter your full name" required class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="name@example.com" required class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Enquiry Type</label>
+            <select id="subject" class="form-input">
+              <option value="campaign">Campaign Hosting / DM Booking</option>
+              <option value="private">Private Room Reservation</option>
+              <option value="store">Vault Store & Product Order</option>
+              <option value="general">General Support</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="5" placeholder="Tell us about your campaign schedule or product question..." required class="form-input"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        </form>
+        <div id="formSuccess" class="success-message" style="display: none;">Message sent successfully! Our guild master will reply shortly.</div>
+      </div>
+
+      <div class="contact-info-col">
+        <div class="card info-card">
+          <div class="info-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <h3>Hub Headquarters</h3>
+            <p>42 Tabletop Way, District 7, Neon Plaza, CA 90210</p>
+          </div>
+        </div>
+
+        <div class="card info-card">
+          <div class="info-icon-box orange-box"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <h3>Operating Hours</h3>
+            <p>Tuesday – Friday: 2:00 PM – 11:00 PM<br>Saturday – Sunday: 11:00 AM – Midnight<br>Monday: Closed for Maintenance</p>
+          </div>
+        </div>
+
+        <div class="card info-card">
+          <div class="info-icon-box purple-box"><i class="fa-solid fa-headset"></i></div>
+          <div>
+            <h3>Direct Contact</h3>
+            <p>Email: support@playhavenhub.com<br>Guild Hotline: +1 (555) 839-2026</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: Guild Membership Tiers -->
+  <section class="container membership-section">
+    <div class="section-header">
+      <div>
+        <span class="badge"><i class="fa-solid fa-id-card"></i> GUILD BENEFITS</span>
+        <h2 class="section-title">Membership Tiers & Perks</h2>
+        <p class="section-subtitle">Unlock priority reservations, special discounts, and private room privileges.</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <span class="badge">TIER 1</span>
+        <h3 class="card-title">Adventurer Pass</h3>
+        <p class="section-subtitle" style="font-size: 0.9rem; margin-bottom: 1.5rem;">Ideal for casual weekend gamers and open social brunch attendees.</p>
+        <ul class="feature-check-list" style="margin-bottom: 1.5rem;">
+          <li><i class="fa-solid fa-check"></i> Free open table access</li>
+          <li><i class="fa-solid fa-check"></i> 5% store merchandise discount</li>
+          <li><i class="fa-solid fa-check"></i> Weekly newsletter access</li>
+        </ul>
+        <div class="card-price">Free Registration</div>
+      </div>
+
+      <div class="card" style="border-color: var(--accent-teal);">
+        <span class="badge" style="background: rgba(6, 182, 212, 0.2); color: var(--accent-teal);">TIER 2 (POPULAR)</span>
+        <h3 class="card-title">Guild Master Pass</h3>
+        <p class="section-subtitle" style="font-size: 0.9rem; margin-bottom: 1.5rem;">Built for regular campaigners, DMs, and competitive tournament players.</p>
+        <ul class="feature-check-list" style="margin-bottom: 1.5rem;">
+          <li><i class="fa-solid fa-check"></i> Priority weekend table booking</li>
+          <li><i class="fa-solid fa-check"></i> 15% discount on vault products</li>
+          <li><i class="fa-solid fa-check"></i> Free coffee & beverage refills</li>
+        </ul>
+        <div class="card-price">$29 / Month</div>
+      </div>
+
+      <div class="card">
+        <span class="badge" style="background: rgba(234, 88, 12, 0.2); color: var(--accent-orange);">TIER 3</span>
+        <h3 class="card-title">Vault VIP Elite</h3>
+        <p class="section-subtitle" style="font-size: 0.9rem; margin-bottom: 1.5rem;">Ultimate access package with private sound-dampened rooms and custom perks.</p>
+        <ul class="feature-check-list" style="margin-bottom: 1.5rem;">
+          <li><i class="fa-solid fa-check"></i> Unlimited private room booking</li>
+          <li><i class="fa-solid fa-check"></i> 25% store discount & free shipping</li>
+          <li><i class="fa-solid fa-check"></i> Dedicated locker storage vault</li>
+        </ul>
+        <div class="card-price">$79 / Month</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container maps-section">
+    <div class="maps-header">
+      <span class="badge"><i class="fa-solid fa-map-location-dot"></i> FIND THE ARENA</span>
+      <h2 class="maps-title">Locate Our <span>Guild Lounge</span></h2>
+      <p class="section-subtitle">Get directions directly to the PlayHaven tabletop arena & store front.</p>
+    </div>
+
+    <div class="card maps-card">
+      <div class="maps-iframe-wrapper">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975067.883785168!2d77.9499887319061!3d17.322354744857027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1794307131220!5m2!1sen!2sin" 
+          width="600" 
+          height="450" 
+          style="border:0;"
+          loading="lazy" 
+          referrerpolicy="strict-origin-when-cross-origin"
+          title="PlayHaven Location Map">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Volunteer & Dungeon Master Partner Program -->
+  <section class="container feature-split-section custom-border-section" style="border-radius: 16px; margin-bottom: 3rem;">
+    <div class="feature-split-grid">
+      <div class="feature-text-content">
+        <span class="badge"><i class="fa-solid fa-handshake"></i> PARTNERSHIP HUB</span>
+        <h2 class="section-title" style="font-size: 2rem; margin-bottom: 1rem;">
+          Become a Resident <br><span style="color: var(--accent-orange);">Dungeon Master or Host</span>
+        </h2>
+        <p class="section-subtitle" style="margin-bottom: 1.5rem;">
+          Are you an experienced storyteller, rules expert, or community leader? Partner with PlayHaven to run official campaigns, host tournaments, and earn hourly bounties plus store credit.
+        </p>
+
+        <ul class="feature-check-list">
+          <li><i class="fa-solid fa-circle-check"></i> Access to professional sound-dampened rooms & terrain library</li>
+          <li><i class="fa-solid fa-circle-check"></i> Flexible scheduling aligned with your weekly availability</li>
+          <li><i class="fa-solid fa-circle-check"></i> Direct revenue sharing on ticketed event registrations</li>
+        </ul>
+
+        <div style="margin-top: 2rem;">
+          <a href="#enquiryForm" class="btn btn-primary"><i class="fa-solid fa-user-plus"></i> Apply as DM / Host</a>
+        </div>
+      </div>
+
+      <div class="feature-img-box">
+        <img src="images/4dea337cfe39cb3bd777064d390b23e2.jpg" alt="DM Partner Program" class="split-img">
+      </div>
+    </div>
+  </section>
+
+  <section class="container contact-faq-section">
+    <div class="faq-header-container">
+      <h2 class="faq-main-title">Frequently Asked <span class="faq-title-highlight">Questions</span></h2>
+      <p class="faq-main-sub">Everything you need to know about PlayHaven table bookings, events, and store services.</p>
+    </div>
+
+    <div class="faq-accordion-wrapper" id="FAQ">
+      
+      <div class="faq-accordion-item">
+        <div class="faq-question-bar">
+          <h3 class="faq-question-text">Do I need to reserve tables in advance, or are walk-ins welcome?</h3>
+          <button class="faq-toggle-btn"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-answer-content">
+          <p>While walk-ins are always welcome for open social brunch tables, we strongly recommend booking ahead for Friday night competitive tournaments and D&D campaign slots to guarantee your seat.</p>
+        </div>
+      </div>
+
+      <div class="faq-accordion-item">
+        <div class="faq-question-bar">
+          <h3 class="faq-question-text">What is included in a private campaign room booking?</h3>
+          <button class="faq-toggle-btn"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-answer-content">
+          <p>Private room bookings include sound-dampened acoustic rooms, customizable LED lighting moods, built-in digital map displays, and full access to our modular terrain libraries.</p>
+        </div>
+      </div>
+
+      <div class="faq-accordion-item">
+        <div class="faq-question-bar">
+          <h3 class="faq-question-text">Are store products available for immediate pickup or delivery?</h3>
+          <button class="faq-toggle-btn"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-answer-content">
+          <p>Yes! All vault store items support immediate in-store pickup at our headquarters counter as well as standard home delivery across all domestic and regional zones.</p>
+        </div>
+      </div>
+
+      <div class="faq-accordion-item">
+        <div class="faq-question-bar">
+          <h3 class="faq-question-text">Can I hire a Dungeon Master for a private group session?</h3>
+          <button class="faq-toggle-btn"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-answer-content">
+          <p>Yes, we have veteran Dungeon Masters available for private bookings. You can select your preferred campaign setting, playstyle, and party difficulty when scheduling your session.</p>
+        </div>
+      </div>
+
+      <div class="faq-accordion-item">
+        <div class="faq-question-bar">
+          <h3 class="faq-question-text">Are outside snacks and beverages allowed in the arena?</h3>
+          <button class="faq-toggle-btn"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="faq-answer-content">
+          <p>We offer a full-service snack bar with craft sodas, gourmet coffee, and gaming fuel snacks on-site. Outside drinks and light snacks are permitted in private lounges, but restricted near open gaming tables.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="container">
+    <div class="cta-banner-box">
+      <span class="badge"><i class="fa-solid fa-dice-d20"></i> READY TO JOIN?</span>
+      <h2 class="section-title">Become Part of the Roll & Realm Family</h2>
+      <p class="section-subtitle">Secure your seat at our upcoming campaign tables or visit our storefront headquarters today.</p>
+      
+      <div class="cta-buttons">
+        <a href="joingamenight.html" class="btn btn-primary"><i class="fa-solid fa-calendar-days"></i> Plan your Play</a>
+        <a href="contact.html" class="btn btn-secondary"><i class="fa-solid fa-headset"></i> Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+          <!-- Footer Logo Image (50px height) -->
+          <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Logo" class="footer-logo-img" style="height: 50px; width: auto; object-fit: contain;">
+          <div style="display: flex; flex-direction: column;">
+            <!-- Primary & Secondary Color-Split Title -->
+            <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+              ROLL & REALM
+            </span>
+            <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+              TABLETOP & HOBBY VAULT
+            </span>
+          </div>
+        </a>
+        <p>Roll & Realm helps tabletop enthusiasts and community players connect with advanced game scheduling systems — safe for your strategies, immersive for your campaigns, and brilliant every time.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Campaign Hosting</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Tabletop Rentals</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Hobby & Paint</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Custom 3D Printing</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Private Party Booking</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Rulebook Consultation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>RESOURCES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Blog</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">FAQ</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Support</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Rule Supplements</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Community Wiki</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Painter Guides</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">About Us</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Contact</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="products.html">Pricing & Store</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Our Guild Masters</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Store Locations</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Careers & Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CONTACT US</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-phone"></i> (123) 456-7890</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-envelope"></i> info@rollandrealm.com</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-map-marker-alt"></i> 123 Game Street, PlayCity</li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-clock"></i> Mon-Sun: 10AM - 11PM</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-headset"></i> Live Guild Support</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-comments"></i> Discord Community Hub</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roll & Realm Tabletop & Hobby Hub. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="allfils.js"></script>
+  <script>
+    const accordionItems = document.querySelectorAll('.faq-accordion-item');
+
+    accordionItems.forEach(item => {
+      const headerBar = item.querySelector('.faq-question-bar');
+      const iconBtn = item.querySelector('.faq-toggle-btn i');
+
+      headerBar.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+
+        accordionItems.forEach(acc => {
+          acc.classList.remove('active');
+          acc.querySelector('.faq-toggle-btn i').className = 'fa-solid fa-plus';
+        });
+
+        if (!isOpen) {
+          item.classList.add('active');
+          iconBtn.className = 'fa-solid fa-xmark';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
