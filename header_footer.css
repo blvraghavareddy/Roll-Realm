@@ -89,10 +89,12 @@ header {
 }
 
 .nav-links a {
-  font-weight: 500;
-  transition: color 0.2s ease;
   position: relative;
-  padding-bottom: 4px;
+  text-decoration: none;
+  color: var(--text-main); /* Uses theme text color so it remains visible in dark mode */
+  font-weight: 500;
+  padding-bottom: 8px;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -103,7 +105,8 @@ header {
   color: var(--accent-teal);
 }
 
-.nav-links a.active::after {
+.nav-links a.active::after,
+.nav-links a:hover::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -430,40 +433,7 @@ header {
   transform: translateY(0);
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.nav-links a {
-  position: relative;
-  text-decoration: none;
-  color: #333; /* Adjust to your text color */
-  font-weight: 500;
-  padding-bottom: 8px; /* Creates space for the line */
-}
-
-/* The active underline effect */
-.nav-links a.active::after,
-.nav-links a:hover::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color:linear-gradient(to right, var(--accent-teal), var(--accent-orange)); /* Change this to match your theme's accent color (e.g., gold or blue) */
-  border-radius: 2px;
-}
-.nav-links a.active::after,
-.nav-links a:hover::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(135deg, var(--accent-teal), var(--accent-orange));
-  border-radius: 2px;
+[dir="rtl"] .dropdown-menu {
+  left: auto;
+  right: 0;
 }
