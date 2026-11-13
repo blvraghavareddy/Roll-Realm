@@ -434,3 +434,7 @@
     height: 280px;
   }
 }
+/* Hides the underline bar inside the dropdown menu list */
+.dropdown-menu li a.active::after {
+  display: none;
+}
