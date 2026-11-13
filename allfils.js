@@ -283,3 +283,28 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(milestonesBanner);
     }
   });
+  /* --- Dynamic Active Navbar Link Highlighter --- */
+document.addEventListener("DOMContentLoaded", () => {
+    let currentPage = window.location.pathname.split("/").pop();
+    if (currentPage === "" || currentPage === "/") {
+        currentPage = "index.html";
+    }
+
+    // Target strictly top-level navbar links to avoid dropdown conflicts
+    const navItems = document.querySelectorAll(".nav-links > li > a");
+
+    navItems.forEach(link => {
+        link.classList.remove("active");
+        const linkHref = link.getAttribute("href");
+        
+        if (linkHref === currentPage) {
+            link.classList.add("active");
+            
+            const parentDropdown = link.closest(".dropdown");
+            if (parentDropdown) {
+                const dropdownToggle = parentDropdown.querySelector(".dropdown-toggle");
+                if (dropdownToggle) dropdownToggle.classList.add("active");
+            }
+        }
+    });
+});
