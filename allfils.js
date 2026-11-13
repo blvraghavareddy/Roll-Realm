@@ -299,3 +299,47 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(milestonesBanner);
     }
 });
+/* --- Dynamic Active Navbar Link Highlighter (Fixed for Home 2 & All Pages) --- */
+document.addEventListener("DOMContentLoaded", () => {
+    // Get the exact filename from the URL (e.g., "home2.html", "about.html")
+    let currentFile = window.location.pathname.split("/").pop().toLowerCase();
+    
+    // Default root / empty path to index.html
+    if (currentFile === "" || currentFile === "/") {
+        currentFile = "index.html";
+    }
+
+    const navItems = document.querySelectorAll(".nav-links a");
+
+    navItems.forEach(link => {
+        link.classList.remove("active");
+        const linkHref = link.getAttribute("href");
+        if (!linkHref) return;
+
+        // Get the filename from the href attribute
+        let hrefFile = linkHref.split("/").pop().toLowerCase();
+
+        // Check for direct match or home page aliases (index.html / main.html)
+        let isMatch = false;
+        if (hrefFile === currentFile) {
+            isMatch = true;
+        } else if ((currentFile === "index.html" || currentFile === "main.html" || currentFile === "") && 
+                   (hrefFile === "index.html" || hrefFile === "main.html" || hrefFile === "")) {
+            isMatch = true;
+        }
+
+        if (isMatch) {
+            link.classList.add("active");
+            
+            // If the active link is inside a dropdown (like Home 1 or Home 2), 
+            // automatically activate the parent dropdown toggle (Home ▾) as well.
+            const parentDropdown = link.closest(".dropdown");
+            if (parentDropdown) {
+                const dropdownToggle = parentDropdown.querySelector(".dropdown-toggle") || parentDropdown.querySelector("a");
+                if (dropdownToggle) {
+                    dropdownToggle.classList.add("active");
+                }
+            }
+        }
+    });
+});
