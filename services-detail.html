@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Details & Guild Offerings | Roll & Realm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="header_footer.css">
+  <link rel="stylesheet" href="services-detail.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+        <!-- Header Logo Image (50px height) -->
+        <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Roll & Realm Logo" class="logo-img" style="height: 50px; width: auto; object-fit: contain;">
+        <div style="display: flex; flex-direction: column;">
+          <!-- Primary & Secondary Color-Split Title -->
+         <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+            ROLL & REALM
+          </span>
+          <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+            TABLETOP & HOBBY VAULT
+          </span>
+        </div>
+      </a>
+      
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li class="dropdown" id="homeDropdown">
+          <a href="index.html" class="active dropdown-toggle">Home <i class="fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="service.html" class="active">Service</a></li>
+        <li><a href="gamenights.html">Game Nights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button id="rtlToggle" class="icon-btn" title="Toggle Text Direction">⇆</button>
+        <button id="themeToggle" class="icon-btn" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+        <a href="joingamenight.html" class="btn btn-secondary">Plan your Play</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Layout with Sticky Sidebar & Separate Detailed Sections -->
+  <div class="services-layout-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="services-sidebar">
+      <h3>Service Directory</h3>
+      <ul class="sidebar-menu">
+        <li><a href="#campaigns"><i class="fa-solid fa-shield-halved"></i> Campaign Hosting</a></li>
+        <li><a href="#rentals"><i class="fa-solid fa-dice-d20"></i> Tabletop Rentals</a></li>
+        <li><a href="#workshops"><i class="fa-solid fa-paint-brush"></i> Miniature Painting</a></li>
+        <li><a href="#tournaments"><i class="fa-solid fa-trophy"></i> Tournament Hosting</a></li>
+        <li><a href="#printing"><i class="fa-solid fa-cube"></i> Custom 3D Printing</a></li>
+        <li><a href="#parties"><i class="fa-solid fa-users"></i> Private Party Booking</a></li>
+      </ul>
+    </aside>
+
+    <!-- Separate Detailed Sections Column -->
+    <main class="services-sections-wrapper">
+
+      <!-- Section 1: Campaign Hosting -->
+      <section id="campaigns" class="service-detail-section">
+        <div class="service-detail-banner">
+          <img src="images/21a9f961c7177a847f383a765817a815_imgupscaler.ai_V1(Fast)_2K.jpg" alt="Campaign Hosting & DM Booking">
+        </div>
+        <div class="service-detail-body">
+          <span class="badge"><i class="fa-solid fa-shield-halved"></i> FLAGSHIP SERVICE</span>
+          <div class="service-detail-header">
+            <h2 class="service-detail-title">Campaign Hosting & DM Booking</h2>
+            <span class="service-price-pill">From $25 / Session</span>
+          </div>
+          <p class="service-detail-desc">
+            Step into fully realized tabletop worlds led by our veteran Dungeon Masters. Whether you are launching a multi-month D&D 5e campaign, testing Pathfinder 2e, or booking an intense weekend one-shot, our private sound-dampened rooms are outfitted with modular 3D dungeon terrain, atmospheric lighting, and integrated surround soundscapes.
+          </p>
+          <div class="service-specs-grid">
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Dedicated veteran Dungeon Master & prep</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Private sound-dampened campaign room</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Full access to painted minis & 3D terrain</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Printed character folios & dice sets included</span></div>
+          </div>
+          <div class="service-detail-footer">
+            <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-clock"></i> 3–4 Hour Sessions • Up to 6 Players</span>
+            <a href="joingamenight.html" class="btn btn-primary">Book Campaign Table</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Tabletop & Terrain Rentals -->
+      <section id="rentals" class="service-detail-section">
+        <div class="service-detail-banner">
+          <img src="images/98b0fe8a060a4fdd8264315916e4063d.jpg" alt="Tabletop & Terrain Rentals">
+        </div>
+        <div class="service-detail-body">
+          <span class="badge"><i class="fa-solid fa-dice-d20"></i> RENTALS</span>
+          <div class="service-detail-header">
+            <h2 class="service-detail-title">Tabletop & Terrain Rentals</h2>
+            <span class="service-price-pill">From $15 / Weekend</span>
+          </div>
+          <p class="service-detail-desc">
+            Test out heavy strategy euro-games, rare out-of-print board games, or complete wargaming terrain sets before committing to a purchase. Every rental kit is inspected, weighed, and organized in custom inserts so your home game night starts without setup delays.
+          </p>
+          <div class="service-specs-grid">
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>300+ verified board games & expansions</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Neoprene battle mats & modular terrain crates</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>100% component-verified & sanitized boxes</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>100% rental fee credited if you buy the game</span></div>
+          </div>
+          <div class="service-detail-footer">
+            <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-calendar-check"></i> Flexible 3-Day & 7-Day Plans</span>
+            <a href="contact.html" class="btn btn-primary">Request Rental Gear</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Miniature Painting Masterclass -->
+      <section id="workshops" class="service-detail-section">
+        <div class="service-detail-banner">
+          <img src="images/e4c722e4dea5cdebb53b48a31d1ff86b.jpg " alt="Miniature Painting Masterclass">
+        </div>
+        <div class="service-detail-body">
+          <span class="badge"><i class="fa-solid fa-paint-brush"></i> WORKSHOPS</span>
+          <div class="service-detail-header">
+            <h2 class="service-detail-title">Miniature Painting Masterclass</h2>
+            <span class="service-price-pill">From $45 / Workshop</span>
+          </div>
+          <p class="service-detail-desc">
+            Level up your hobby craft in small-group weekend workshops led by award-winning miniature painters. Learn everything from foundational priming and speedpaint contrast techniques to advanced zenithal airbrushing, wet blending, and non-metallic metal (NMM) highlights.
+          </p>
+          <div class="service-specs-grid">
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>All acrylic paints, washes & Sable brushes supplied</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Daylight-balanced task lamps at every station</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Beginner, Intermediate & Airbrush tracks</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Keep your finished hero miniature</span></div>
+          </div>
+          <div class="service-detail-footer">
+            <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-users"></i> Capped at 8 Painters per Class</span>
+            <a href="contact.html" class="btn btn-primary">Reserve Workshop Spot</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Tournament & League Hosting -->
+      <section id="tournaments" class="service-detail-section">
+        <div class="service-detail-banner">
+          <img src="images/cf44b0608db42c596e1615c1e993de41.jpg" alt="Tournament & League Hosting">
+        </div>
+        <div class="service-detail-body">
+          <span class="badge"><i class="fa-solid fa-trophy"></i> COMPETITIVE</span>
+          <div class="service-detail-header">
+            <h2 class="service-detail-title">Tournament & League Hosting</h2>
+            <span class="service-price-pill">From $10 / Entry</span>
+          </div>
+          <p class="service-detail-desc">
+            Compete in structured weekly leagues and seasonal championship brackets for trading card games, CyberGrid deck-builders, and tabletop skirmish wargames. Our certified judges ensure fair play, accurate pairings, and curated prize pools.
+          </p>
+          <div class="service-specs-grid">
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Swiss & Double-Elimination bracket tracking</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Certified rules judges on the arena floor</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Store credit, promo cards & trophy payouts</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Seasonal leaderboard & guild ranking points</span></div>
+          </div>
+          <div class="service-detail-footer">
+            <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-award"></i> Weekly Friday & Saturday Brackets</span>
+            <a href="gamenights.html" class="btn btn-primary">Register League</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Custom Terrain & 3D Printing -->
+      <section id="printing" class="service-detail-section">
+        <div class="service-detail-banner">
+          <img src="images/fee4cebb9d84504f4ab10c9d15333ec7.jpg" alt="Custom Terrain & 3D Printing">
+        </div>
+        <div class="service-detail-body">
+          <span class="badge"><i class="fa-solid fa-cube"></i> CUSTOM FABRICATION</span>
+          <div class="service-detail-header">
+            <h2 class="service-detail-title">Custom Terrain & 3D Printing</h2>
+            <span class="service-price-pill">From $30 / Commission</span>
+          </div>
+          <p class="service-detail-desc">
+            Bring your custom HeroForge characters, boss monsters, and full dungeon layouts into physical form. We print using ultra-crisp 8K photopolymer resin for fine character details and impact-resistant FDM filaments for large-scale buildings and modular tiles.
+          </p>
+          <div class="service-specs-grid">
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>8K MSLA resin printing for fine mini details</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Heavy-duty FDM printing for terrain & inserts</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Full UV curing, support removal & priming</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>STL file scaling & custom basing options</span></div>
+          </div>
+          <div class="service-detail-footer">
+            <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-truck-fast"></i> 48–72 Hour Typical Turnaround</span>
+            <a href="contact.html" class="btn btn-primary">Request Custom Print</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Private Event & Party Packages -->
+      <section id="parties" class="service-detail-section">
+        <div class="service-detail-banner">
+          <img src="images/62619f1e32affe9a0591c8138b1ca3a9.jpg" alt="Private Event & Party Packages">
+        </div>
+        <div class="service-detail-body">
+          <span class="badge"><i class="fa-solid fa-users"></i> GROUP EVENTS</span>
+          <div class="service-detail-header">
+            <h2 class="service-detail-title">Private Event & Party Packages</h2>
+            <span class="service-price-pill">From $150 / Event</span>
+          </div>
+          <p class="service-detail-desc">
+            Host an unforgettable birthday celebration, guild meetup, or corporate team-building session with exclusive access to our gaming lounge. Our dedicated game coaches handle rule explanations and tournament facilitation so everyone jumps straight into the fun.
+          </p>
+          <div class="service-specs-grid">
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Private lounge access for up to 30 guests</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Dedicated Game Coaches to teach every title</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Curated party, social deduction & co-op games</span></div>
+            <div class="spec-item"><i class="fa-solid fa-circle-check"></i><span>Optional snack, beverage & cake table setup</span></div>
+          </div>
+          <div class="service-detail-footer">
+            <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-champagne-glasses"></i> Custom 3-Hour & Full-Evening Blocks</span>
+            <a href="contact.html" class="btn btn-primary">Book Private Event</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+          <!-- Footer Logo Image (50px height) -->
+          <img src="images/Gemini_Generated_Image_be06c9be06c9be06-removebg-preview.png" alt="Logo" class="footer-logo-img" style="height: 50px; width: auto; object-fit: contain;">
+          <div style="display: flex; flex-direction: column;">
+            <!-- Primary & Secondary Color-Split Title -->
+            <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; font-style: italic; letter-spacing: 0.5px; color: var(--accent-teal); line-height: 1.1;">
+              ROLL & REALM
+            </span>
+            <span style="font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 2.5px; color: var(--accent-orange); text-transform: uppercase; margin-top: 2px;">
+              TABLETOP & HOBBY VAULT
+            </span>
+          </div>
+        </a>
+        <p>Roll & Realm helps tabletop enthusiasts and community players connect with advanced game scheduling systems — safe for your strategies, immersive for your campaigns, and brilliant every time.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="services-detail.html#campaigns">Campaign Hosting</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="services-detail.html#rentals">Tabletop Rentals</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="services-detail.html#workshops">Hobby & Paint</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="services-detail.html#printing">Custom 3D Printing</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="services-detail.html#parties">Private Party Booking</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="service.html">Rulebook Consultation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>RESOURCES</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Blog</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">FAQ</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Support</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Rule Supplements</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Community Wiki</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="blog.html">Painter Guides</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">About Us</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="contact.html">Contact</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="products.html">Pricing & Store</a></li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Our Guild Masters</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Store Locations</a></li>
+          <li><i class="fa-solid fa-angle-right"></i> <a href="about.html">Careers & Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>CONTACT US</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-phone"></i> (123) 456-7890</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-envelope"></i> info@rollandrealm.com</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-map-marker-alt"></i> 123 Game Street, PlayCity</li>
+          <!-- 3 Added Points -->
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-clock"></i> Mon-Sun: 10AM - 11PM</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-headset"></i> Live Guild Support</li>
+          <li><i class="fa-solid fa-angle-right"></i> <i class="fa-solid fa-comments"></i> Discord Community Hub</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Roll & Realm Tabletop & Hobby Hub. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="allfils.js"></script>
+</body>
+</html>

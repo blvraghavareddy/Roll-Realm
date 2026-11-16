@@ -1,0 +1,194 @@
+html {
+      scroll-behavior: smooth;
+    }
+
+    /* --- Main Layout with Sticky Sidebar --- */
+    .services-layout-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* Sticky Sidebar */
+    .services-sidebar {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.75rem;
+      position: sticky;
+      top: 100px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .services-sidebar h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .sidebar-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .sidebar-menu a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .sidebar-menu a:hover,
+    .sidebar-menu a.active {
+      background-color: var(--bg-card-hover);
+      color: var(--accent-teal);
+      font-weight: 600;
+    }
+
+    .sidebar-menu a i {
+      font-size: 0.9rem;
+      color: var(--accent-teal);
+      width: 18px;
+      text-align: center;
+    }
+
+    /* Separate Detailed Service Sections */
+    .services-sections-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    .service-detail-section {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      scroll-margin-top: 105px; /* Ensures sticky header doesn't cover section title on anchor jump */
+      transition: border-color 0.3s ease;
+    }
+
+    .service-detail-section:hover {
+      border-color: var(--accent-teal);
+    }
+
+    .service-detail-banner {
+      width: 100%;
+      height: 320px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .service-detail-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-detail-section:hover .service-detail-banner img {
+      transform: scale(1.03);
+    }
+
+    .service-detail-body {
+      padding: 2.5rem;
+    }
+
+    .service-detail-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-detail-title {
+      font-family: var(--font-heading);
+      font-size: 1.9rem;
+      color: var(--text-main);
+      line-height: 1.25;
+    }
+
+    .service-price-pill {
+      background: rgba(14, 116, 144, 0.12);
+      color: var(--accent-teal);
+      border: 1px solid var(--accent-teal);
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    .service-detail-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.75rem;
+    }
+
+    .service-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      background: var(--bg-card-hover);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+    }
+
+    .spec-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .spec-item i {
+      color: var(--accent-teal);
+      margin-top: 4px;
+    }
+
+    .service-detail-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    @media (max-width: 992px) {
+      .services-layout-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .services-sidebar {
+        position: static;
+      }
+      .service-detail-banner {
+        height: 240px;
+      }
+      .service-detail-body {
+        padding: 1.75rem;
+      }
+    }
