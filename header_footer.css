@@ -46,6 +46,7 @@ a {
   text-decoration: none;
 }
 
+/* --- Header & Navigation --- */
 header {
   background-color: var(--bg-card);
   backdrop-filter: blur(8px);
@@ -177,7 +178,7 @@ header {
   gap: 0.75rem;
 }
 
-/* --- Toggle Buttons matched exactly to Secondary Buttons --- */
+/* --- Buttons & Action Elements --- */
 .icon-btn {
   display: inline-flex;
   align-items: center;
@@ -252,6 +253,7 @@ header {
   text-transform: uppercase;
 }
 
+/* --- Footer Layout & Styling --- */
 .site-footer {
   background-color: var(--bg-card);
   border-top: 1px solid var(--border-color);
@@ -296,6 +298,7 @@ header {
   font-size: 0.9rem;
   line-height: 1.5;
   max-width: 320px;
+  color: var(--text-muted);
 }
 
 .footer-socials {
@@ -342,6 +345,7 @@ header {
 
 .footer-links a {
   font-size: 0.9rem;
+  color: var(--text-muted);
   transition: color 0.2s ease;
 }
 
@@ -349,9 +353,29 @@ header {
   color: var(--accent-teal);
 }
 
+/* FIXED: Properly aligned footer bottom bar */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
 .footer-bottom-links {
   display: flex;
   gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
 }
 
 .footer-bottom-links a:hover {
@@ -375,6 +399,7 @@ header {
   color: var(--accent-teal);
 }
 
+/* --- Responsive Media Queries --- */
 @media (max-width: 1024px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
@@ -439,19 +464,4 @@ header {
 [dir="rtl"] .dropdown-menu {
   left: auto;
   right: 0;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr; /* Brand + 4 link columns */
-  gap: 2rem;
-}
-
-.footer-bottom {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
 }
