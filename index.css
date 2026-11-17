@@ -65,7 +65,7 @@
   grid-template-columns: 1.1fr 0.9fr;
   gap: 3.5rem;
   align-items: center;
-  padding: 0;
+  padding: 0 2rem; /* Aligns hero text and badge precisely with nav-container */
 }
 
 .hero-content {
@@ -396,7 +396,6 @@
   right: 0;
 }
 
-
 /* --- Responsive Media Queries --- */
 @media (max-width: 1024px) {
   .flex-card {
@@ -421,6 +420,7 @@
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 0 2rem;
   }
   .hero-content {
     text-align: center;
