@@ -1,4 +1,3 @@
-
 .gradient-text {
   background: linear-gradient(135deg, var(--accent-teal), var(--accent-orange));
   -webkit-background-clip: text;
@@ -13,18 +12,19 @@
 }
 
 .hero2 {
-  position: relative;
   width: 100%;
   min-height: 85vh;
+  margin: 0;
+  padding: 5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 6rem 2rem;
-  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.7) 0%, rgba(15, 17, 26, 0.95) 100%),
+  background: linear-gradient(rgba(15, 17, 26, 0.85), rgba(15, 17, 26, 0.85)), 
               url('images/Gemini_Generated_Image_5ckll5ckll5ckll5.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -431,7 +431,26 @@
     height: 280px;
   }
 }
+
 /* Hides the underline bar inside the dropdown menu list */
 .dropdown-menu li a.active::after {
   display: none;
+}
+
+/* --- Lock btn-primary Colors in Dark Mode on Home 2 Page --- */
+[data-theme="dark"] .hero2-container .btn-primary,
+[data-theme="dark"] .spotlight-text .btn-primary,
+[data-theme="dark"] .workshop-preview-btn,
+[data-theme="dark"] .guild-banner .btn-primary,
+[data-theme="dark"] .container .btn-primary {
+  background: linear-gradient(135deg, #0e7490, #ea580c) !important;
+  box-shadow: 0 4px 14px rgba(14, 116, 144, 0.3) !important;
+}
+
+[data-theme="dark"] .hero2-container .btn-primary:hover,
+[data-theme="dark"] .spotlight-text .btn-primary:hover,
+[data-theme="dark"] .workshop-preview-btn:hover,
+[data-theme="dark"] .guild-banner .btn-primary:hover,
+[data-theme="dark"] .container .btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4) !important;
 }

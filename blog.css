@@ -249,3 +249,14 @@ a {
     height: 260px;
   }
 }
+/* --- Lock btn-primary Colors in Dark Mode on Blog Page --- */
+[data-theme="dark"] .sidebar-cta-card .btn-primary,
+[data-theme="dark"] .container .btn-primary {
+  background: linear-gradient(135deg, #0e7490, #ea580c) !important;
+  box-shadow: 0 4px 14px rgba(14, 116, 144, 0.3) !important;
+}
+
+[data-theme="dark"] .sidebar-cta-card .btn-primary:hover,
+[data-theme="dark"] .container .btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4) !important;
+}

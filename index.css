@@ -396,6 +396,7 @@
   right: 0;
 }
 
+
 /* --- Responsive Media Queries --- */
 @media (max-width: 1024px) {
   .flex-card {
